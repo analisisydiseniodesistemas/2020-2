@@ -1,6 +1,7 @@
 EXE:=TestPlaneacionBasadaNCalendar.exe
 EXE1:=CalendarTestDriver.exe
 EXE2:=ADS_Planning_EJ2020.exe
+EXE3:=ADS_TestingFecha.exe
 OBJETOS:=Calendario.o Asignacion.o Dia.o
 OBJETOSA:=CalendarioA.o AsignacionA.o DiaA.o util.o
 CC=g++
@@ -35,5 +36,13 @@ Dummy.exe:dummy.o $(OBJETOSA)
 	$(CC) -o $@ $^
 CalendarioA.prep:../CommonFiles/Calendario.cpp
 	$(CC) -DLEAPYEAR -E $^ -o $@
+TestFechaPrep:TestFecha.cpp
+	$(CC) -H -E $< -o $@
+TestFecha.o:TestFecha.cpp
+	$(CC) -I../CommonFiles/ -c $<
+gettingdate.o:../CommonFiles/gettingdate.c
+	$(CC)  -c $^ -o $@
+$(EXE3):$(OBJETOSA) TestFecha.o gettingdate.o
+	$(CC) $^ -o $@
 clean:
 	rm -v *.o *.exe *.stackdump
