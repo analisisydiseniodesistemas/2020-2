@@ -9,6 +9,7 @@ CC=g++
 CXXFLAGS +=-DCAL_GREGORIANO 
 MYCXXFLAGS=-DUSING_ARREGLO
 #all:$(EXE) $(EXE1)
+default:$(EXE3)
 all:$(EXE2)
 $(EXE):$(OBJETOS) InVdOpS_AD2019.o 
 	$(CC) $(MYCXXFLAGS) $^ -o $@
@@ -41,8 +42,10 @@ TestFechaPrep:TestFecha.cpp
 TestFecha.o:TestFecha.cpp
 	$(CC) -I../CommonFiles/ -c $<
 gettingdate.o:../CommonFiles/gettingdate.c
-	$(CC)  -c $^ -o $@
-$(EXE3):$(OBJETOSA) TestFecha.o gettingdate.o
+	$(CC) -c $^ -o $@
+bubbles.o:../CommonFiles/bubbles.cpp
+	$(CC) -I../CommonFiles/ -c $^ -o $@
+$(EXE3):$(OBJETOSA) TestFecha.o gettingdate.o bubbles.o
 	$(CC) $^ -o $@
 clean:
 	rm -v *.o *.exe *.stackdump

@@ -22,4 +22,7 @@ typedef struct Fecha{
   bool operator>(Fecha& f){return (F>f.F);}
 } Fecha;
 void printf_fecha(Fecha *,Calendario *);
+void show_vector_ddconf(vector<Dia*>);
+void ordenar_ddc(vector<Dia*>&);  /*solved at file bubbles.cpp*/
+void cat_vddc(vector<Dia*>&,vector<Dia*>&,vector<Dia*>&);
 #endif /*FECHA_H*/

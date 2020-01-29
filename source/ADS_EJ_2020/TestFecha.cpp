@@ -6,6 +6,7 @@ using namespace std;
 #include <ctime>
 #include <Calendario.h> /*Add -I../CommonFiles/ in your make file*/
 #include <Fecha.h>      /*Add -I../CommonFiles/ in your make file*/
+#include <Dia.h>        /*Add -I../CommonFiles/ in your make file*/
 #include <gettingdate.h>/*Add -I../CommonFiles/ in your make file*/
 
 /**The next lines are included by now, in order to fix a compilation
@@ -40,6 +41,28 @@ main(int argc,char *argv[])
   }else{
     cout<<":-)\n";
   }
+//  vector<Dia*> VDDC = Cal_Greg->get_Dias_DC(VDF,vdnl); 
+//  Fix this -----------^ (We could fill vector VDDC using push_back method
+//  and pointers to Dia propperly initialized with Fecha objects/Fecha 
+//  pointers)
+  Fecha fLunes27ENE(27,1,2020),fJueves30ENE(30,1,2020),
+        fLunes03FEB(3,2,2020),fJueves06FEB(6,2,2020),
+        fMartes28ENE(28,1,2020),fViernes31ENE(31,1,2020),
+        fMartes04FEB(4,2,2020),fViernes07FEB(7,2,2020);
+  vector<Dia*> VDDC,vddc,v;
+  VDDC.push_back(new Dia(&fLunes27ENE));
+  VDDC.push_back(new Dia(&fJueves30ENE));
+  VDDC.push_back(new Dia(&fLunes03FEB));
+  VDDC.push_back(new Dia(&fJueves06FEB));
+  vddc.push_back(new Dia(&fMartes28ENE));
+  vddc.push_back(new Dia(&fViernes31ENE));
+  vddc.push_back(new Dia(&fMartes04FEB));
+  vddc.push_back(new Dia(&fViernes07FEB));
+  cat_vddc(VDDC,vddc,v);
+  show_vector_ddconf(v);
+  ordenar_ddc(v);
+  cout<<"Despu\\'es de ordenar los d\\'ias por su fecha."<<"\n";
+  show_vector_ddconf(v);
   
   return 0xa;
 }/*end main()*/
