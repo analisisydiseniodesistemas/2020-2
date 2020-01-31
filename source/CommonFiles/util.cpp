@@ -6,14 +6,13 @@ using namespace std;
 #include "../CommonFiles/Calendario.h"
 #include "../CommonFiles/Fecha.h"
 #include "../CommonFiles/Dia.h"
-extern char MES[][32];
-void
+//extern char MES[][32];    /*turned a comment on thursday 2020.01.30*/  
+void   /**Becomed a friend function of class Calendario on 2020.01.30*/
 printf_fecha(Fecha *fPt,Calendario *Cal_Greg)
 {
-    //printf("%15s %2d de %7s de %4d\n",Cal_Greg->get_day_name(fPt)
     printf("%15s %2d de %s de %4d\n",Cal_Greg->get_day_name(fPt)
                                      ,fPt->d
-                                     ,MES[fPt->m]
+                                     ,Cal_Greg->MES[fPt->m]
                                      ,fPt->a);
 }
 

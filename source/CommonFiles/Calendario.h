@@ -38,6 +38,7 @@ class Dia;
 class Actividad;
 class Alumno;
 class Calendario{
+static char MES[][32];      /*Thursday 2020.01.30*/
 public:
   void mostrar_fechas(string dia,string mes);
   Calendario(int year):numdanio(year){ }
@@ -124,6 +125,8 @@ public:
 #else
   char *get_day_name(Fecha *f_Pt);
 #endif
+/** Thursday 2020.01.30*/
+friend void printf_fecha(Fecha *,Calendario *);  
 
   int numdanio;  //numero de anio
 };//end class Calendario

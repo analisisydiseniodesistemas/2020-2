@@ -21,7 +21,13 @@ using namespace std;
 #include "Calendario.h"         /*2019.10.20*/
 extern string ARREGLO[][7];
 extern string MONTH[];
-extern char MES[][32];
+//extern char MES[][32];
+/** Definition of array MES made after definition of array
+ * MES at Calendario.cpp            (thursday 2020.01.30)*/
+static char MES[][32]={"static char MES[][32]",
+"enero","febrero","marzo","abril","mayo","junio","julio",
+"agosto","septiembre","octubre","noviembre","diciembre"
+};
 extern int anio;
 /**2019.10.20 If it is necessary, for backward compatibility, 
  * define USING_ARREGLO at command in the make file.
@@ -42,10 +48,14 @@ ostream& operator<<(ostream& out,Dia& D){
 assert((D.f->m>=1)&&(D.f->m<=12));
 assert((D.f->d>=1)&&(D.f->d<=31));
 #endif /*NDEBUG*/
+#ifdef LMC_TEST_20200130_1
   printf("%s %d de %s de %d\n",Cal_Greg->get_day_name(D.f)
                               ,D.f->d
                               ,MES[D.f->m]
                               ,anio);
+#endif /*LMC_TEST_20200130_1*/
+  out<<Cal_Greg->get_day_name(D.f)
+     <<" "<<D.f->d<<" "<<MES[D.f->m]<<" de "<<D.f->a<<"\n";
   delete Cal_Greg;
 #endif /*USING_ARREGLO*/
   for(unsigned int i=0;i<D.A.size();i++){

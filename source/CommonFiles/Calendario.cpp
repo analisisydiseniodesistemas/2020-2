@@ -16,9 +16,6 @@ using std::vector;
 #include "Dia.h"
 #include "Actividad.h"
 #include "Asignacion.h"
-//extern int NUMDALUMNOS;
-extern int anio;
-extern Calendario *Cal_Greg;   /*Calendario Gregoriano*/
 
 /* A\~no 2019*/         /*2019.10.20*/
 string ARREGLO[][7] = {
@@ -45,6 +42,11 @@ static char MES[][32]={"static char MES[][32]",
 "agosto","septiembre","octubre","noviembre","diciembre"
 };
 //#endif /*USING_ARREGLO*/
+/** Thursday 2020.01.30 */
+char Calendario::MES[][32]={"static char MES[][32]",
+"enero","febrero","marzo","abril","mayo","junio","julio",
+"agosto","septiembre","octubre","noviembre","diciembre"
+};
 
 void Calendario::mostrar_fechas(string d,string m){
   SetDIntType* sdi=obtener_nums_ddia(d,m);
@@ -177,11 +179,11 @@ inic:
 /**
  * @param fi:apuntador a fECHA iNICIAL
  * @param ff:apuntador a fECHA fINAL
+ * pre: Ambas fechas corresponden al mismo a\~{n}o
  */ 
 vector<Fecha*> Calendario::get_Fechas(Fecha *fi,Fecha *ff,vector<string> dias){
   int im=fi->m,id=fi->d,cnt=0; /*iNDICE del mES, iNDICE del dIA*/
   vector<Fecha*> vdf;
-//  Calendario *Cal_Greg=new Calendario();   /*Calendario Gregoriano*/
   /** Cantidades de dias de los meses de los a\~nos:
    *  (2016--2016 fue bisiesto--,2017,2018,2019)
    */
@@ -199,17 +201,16 @@ inic:
 #ifdef USING_ARREGLO
     if(esta_incluido(ARREGLO[im][id%7],dias)){
 #else
-    //if(esta_incluido(Cal_Greg->get_day_name(fi),dias)){
-    if(esta_incluido(Cal_Greg->get_day_name(new Fecha(id,im)),dias)){
+    if(esta_incluido(get_day_name(new Fecha(id,im,fi->a)),dias)){/**2020.01.30*/
 #ifndef NDEBUG
   printf("La fecha %s %d de %s de %d SI ESTA INCLUIDA!\n"
-        ,Cal_Greg->get_day_name(fi)
+        ,get_day_name(fi)             /*2020.01.30*/
         ,fi->d
         ,MES[fi->m]
         ,fi->a);
 #endif /*NDEBUG*/
 #endif /*USING_ARREGLO*/
-      vdf.push_back(new Fecha(id,im));
+      vdf.push_back(new Fecha(id,im,fi->a));
     }
     if((id+1)<=TamM[im]){
       id++;
@@ -221,7 +222,7 @@ inic:
 #ifdef USING_ARREGLO
   if(esta_incluido(ARREGLO[ff->m][ff->d%7],dias)){
 #else
-    if(esta_incluido(Cal_Greg->get_day_name(ff),dias)){
+    if(esta_incluido(get_day_name(ff),dias)){   /**2020.01.30*/
 #endif /*USING_ARREGLO*/
     vdf.push_back(new Fecha(ff->d,ff->m));
   }
@@ -255,7 +256,7 @@ void Calendario::planear(vector<Dia*> DIA,vector<Actividad*> ACT){
   printf("void Calendario::planear(vector<Dia*> DIA,vector<Actividad*> ACT)\n");
 #ifndef USING_ARREGLO
   printf("i=%3d j=%3d: %s %d/%s/%d DIA[i]->TD=%5.2f ACT[j]->TR=%5.2f\n",
-         i,j,Cal_Greg->get_day_name(DIA[i]->f),DIA[i]->f->d,MES[DIA[i]->f->m],
+         i,j,get_day_name(DIA[i]->f),DIA[i]->f->d,MES[DIA[i]->f->m],
          DIA[i]->f->a,DIA[i]->TD,ACT[j]->TR);
 #endif /*USING_ARREGLO*/
 #endif /*NDEBUG*/
@@ -400,7 +401,9 @@ Calendario::get_day_name(Fecha *f_Pt)
       /*(1/4)A, cuarta parte del a\~no (divisi\'on entera)*/
       Aover4, 
       S;/*c\'odigo del siglo*/
+#ifdef LMC_TEST_20200130_2
   f_Pt->a=anio;
+#endif /*LMC_TEST_20200130_2*/
   D=f_Pt->d;
   M=Month_Code[f_Pt->m-1];
 //  A=f_Pt->a%100;

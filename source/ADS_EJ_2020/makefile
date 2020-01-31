@@ -9,8 +9,8 @@ CC=g++
 CXXFLAGS +=-DCAL_GREGORIANO 
 MYCXXFLAGS=-DUSING_ARREGLO
 #all:$(EXE) $(EXE1)
-default:$(EXE3)
 all:$(EXE2)
+default:$(EXE3)
 $(EXE):$(OBJETOS) InVdOpS_AD2019.o 
 	$(CC) $(MYCXXFLAGS) $^ -o $@
 Calendario.o:../CommonFiles/Calendario.cpp
@@ -23,7 +23,7 @@ InVdOpS_AD2019.o:InVdOpS_AD2019.cpp
 	$(CC) $(MYCXXFLAGS) -c $^ -o $@
 util.o:../CommonFiles/util.cpp
 	$(CC) -DLEAPYEAR -c $^ -o $@
-$(EXE2):$(OBJETOSA) test_Calendario.o
+$(EXE2):$(OBJETOSA) test_Calendario.o bubbles.o
 	$(CC) $^ -o $@
 CalendarioA.o:../CommonFiles/Calendario.cpp
 	$(CC) -DLEAPYEAR -c $^ -o $@

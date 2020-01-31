@@ -29,27 +29,27 @@ using namespace std;
 
 /*ends definition of macro NACTIV()*/
 
-int anio = 2020;    /*IS THIS ACTUALLY NEEDED?????????????*/   
+//int anio = 2020;    /*IS THIS ACTUALLY NEEDED?????????????*/   
                     /**                           2020.01.27
                       YES, see default constructor of class Fecha at 
                       file ../CommonFiles/Fecha.h           */ 
-Calendario *Cal_Greg;   /*Calendario Gregoriano*/
+//Calendario *Cal_Greg;   /*Calendario Gregoriano*/
 
-char MES[][32]={"static char MES[][32]",
-	"enero","febrero","marzo","abril","mayo","junio","julio",
-	"agosto","septiembre","octubre","noviembre","diciembre"
-};
+//char MES[][32]={"static char MES[][32]",
+//	"enero","febrero","marzo","abril","mayo","junio","julio",
+//	"agosto","septiembre","octubre","noviembre","diciembre"
+//};
 
 int main(int argc,char *argv[])
 {
-  Cal_Greg=new Calendario(2020);    /*Calendario Gregoriano*/
+  //Cal_Greg=new Calendario(2020);    /*Calendario Gregoriano*/
   /*IS Cal_Greg ACTUALLY NEEDED??????????????  2020.01.23
    *                                                    2020.01.27
    *YES, it is used passing it the message get_day_name(Fecha*) */
 
   Calendario *Cal2020 = new Calendario(2020);
-  Fecha f1(20,1); /*Lunes 20 de enero de 2020 */
-  Fecha f2(31,5); /*Domingo 31 de mayo de 2020*/
+  Fecha f1(20,1,2020); /*Lunes 20 de enero de 2020 */
+  Fecha f2(31,5,2020); /*Domingo 31 de mayo de 2020*/
 
   /*vector de dias de la semana en que hay clases (te\'{o}ria) de la 
    * UA correspondiente*/
@@ -75,10 +75,10 @@ int main(int argc,char *argv[])
   vector<Dia*> VDDC = Cal2020->get_Dias_DC(VDF,vdnl); 
   /*Se asigna Tiempo Disponible Total segun el dia de que se trate*/
   for (unsigned int i = 0; i < VDDC.size(); i++) {
-    if(!strcmp(Cal_Greg->get_day_name(VDDC[i]->f),"Lunes")){
+    if(!strcmp(Cal2020->get_day_name(VDDC[i]->f),"Lunes")){
       VDDC[i]->set_TDT(1.5);
     }
-    if(!strcmp(Cal_Greg->get_day_name(VDDC[i]->f),"Jueves")){
+    if(!strcmp(Cal2020->get_day_name(VDDC[i]->f),"Jueves")){
       VDDC[i]->set_TDT(1.5);
     }
   }
@@ -145,7 +145,7 @@ int main(int argc,char *argv[])
   VDD.push_back("Viernes");
   /*vector con las Fechas entre F1 y F2 correspondientes a 
    los dias en el vector VDD */
-  vector<Fecha*> VDFechas= Cal_Greg->get_Fechas(&F1,&F2,VDD); 
+  vector<Fecha*> VDFechas= Cal2020->get_Fechas(&F1,&F2,VDD); 
   /*construir un vector de apuntadores a Dias no laborables*/
   vector<Dia*> VDNL;
   VDNL.push_back(new Dia(new Fecha(3,2,2020))); /*Lunes 3 de febrero de 2020*/
@@ -158,13 +158,13 @@ int main(int argc,char *argv[])
    clase para los que se planificar\'an actividades) este vector de Dias 
    laborables se obtendra pasando un mensaje al objeto de clase Calendario*/
    /*obtener Vector De Dias de Clase,*/
-   vector<Dia*> VDDClase = Cal_Greg->get_Dias_DC(VDFechas,VDNL); 
+   vector<Dia*> VDDClase = Cal2020->get_Dias_DC(VDFechas,VDNL); 
   /*Se asigna Tiempo Disponible Total segun el dia de que se trate*/
   for (unsigned int i = 0; i < VDDClase.size(); i++){
-    if(!strcmp(Cal_Greg->get_day_name(VDDClase[i]->f),"Martes")){
+    if(!strcmp(Cal2020->get_day_name(VDDClase[i]->f),"Martes")){
       VDDClase[i]->set_TDT(1.5);
     }
-    if(!strcmp(Cal_Greg->get_day_name(VDDClase[i]->f),"Viernes")){
+    if(!strcmp(Cal2020->get_day_name(VDDClase[i]->f),"Viernes")){
       VDDClase[i]->set_TDT(1.5);
     }
   }
@@ -190,7 +190,7 @@ con C++",4.0);
   NACTIV("P14 Generaci\\'on de c\\'odigo", 4.5);
   /*Por ultimo se hace la planeacion pasando el vector de dias de 
    clase de laboratorio y el vector de actividades*/
-  Cal_Greg->planear(VDDClase,VDActividades);
+  Cal2020->planear(VDDClase,VDActividades);
   /*Finalmente se imprime en pantalla los dias a planear con las 
   actividades correspondientes por dia de clase entre las fechas 
   F1 y F2.*/
@@ -198,11 +198,18 @@ con C++",4.0);
   for (unsigned int i = 0;i<VDDClase.size();i++) {
   	cout<<*VDDClase[i]<<endl;
   }
+  vector<Dia*> V;
+  cat_vddc(VDDC,VDDClase,V);
+  ordenar_ddc(V);
+  cout<<"Los dias a planificar en 2020-2 para ADS son:"<<endl;
+  for (unsigned int i = 0;i<VDDClase.size();i++) {
+  	cout<<*V[i]<<endl;
+  }
   delete Cal2020;  /*Borrar Calendario usado anteriormente*/
-  delete Cal_Greg; /*Borrar Calendario Gregoriano a usar de ahora 
-                     en m\'as. Lo ``nuevo'' en la clase del objeto
-                     Cal_Greg es el m\'etodo 
-                     (char [][32] get_day_name(Fecha*))*/
+  //delete Cal_Greg; /*Borrar Calendario Gregoriano a usar de ahora 
+  //                   en m\'as. Lo ``nuevo'' en la clase del objeto
+  //                   Cal_Greg es el m\'etodo 
+  //                   (char [][32] get_day_name(Fecha*))*/
                    /*En realidad, los dos objetos (Cal2019 y Cal_Greg) 
                      son de clase Calendario, as\'i que en una 
                      siguiente versi\'on planeo usar solo una variable 

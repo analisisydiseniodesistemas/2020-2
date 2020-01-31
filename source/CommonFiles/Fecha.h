@@ -10,8 +10,8 @@ typedef struct Fecha{
   int a;/*a\~no*/
   int F;/**F=a\times 10000+m\times 100+d; can be initialized at 
          * constructor Fecha(int x,int y,int z)*/
-  Fecha():d(0),m(0),a(anio){ }
-  Fecha(int a,int b):d(a),m(b),a(anio){ }
+  Fecha():d(0),m(0),a(1){ }/**I changed a(anio) to a(1),2020.01.30*/
+  Fecha(int a,int b):d(a),m(b),a(1){ }/** idem */
   /*2019.10.20,2020.01.28*/
   Fecha(int x,int y,int z):d(x),m(y),a(z),F(z*10000+y*100+x){ } 
   /*sobrescritura (sobrecarga/overloading) del operador ==*/
