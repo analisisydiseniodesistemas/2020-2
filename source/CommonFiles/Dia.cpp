@@ -28,7 +28,26 @@ static char MES[][32]={"static char MES[][32]",
 "enero","febrero","marzo","abril","mayo","junio","julio",
 "agosto","septiembre","octubre","noviembre","diciembre"
 };
-extern int anio;
+//extern int anio;
+static std::string day_place[7][2]={      /*Friday 2020.01.31*/
+  {"Lunes","S106"},
+  {"Martes","C1"},
+  {"Mi\\'ercoles",""},
+  {"Jueves","S106"},
+  {"Viernes","C1"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
+  {"Lunes","16:00-17:30"},
+  {"Martes","16:00-17:30"},
+  {"Mi\\'ercoles",""},
+  {"Jueves","16:00-17:30"},
+  {"Viernes","16:00-17:30"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+
 /**2019.10.20 If it is necessary, for backward compatibility, 
  * define USING_ARREGLO at command in the make file.
  */ 
@@ -39,8 +58,6 @@ ostream& operator<<(ostream& out,Dia& D){
 #else
   Calendario *Cal_Greg=new Calendario();
 #ifndef NDEBUG
-//  printf("%s: \n",__FILE__);
-//assert(1==0);
 //  cout<<__FILE__<<": "<<__LINE__+1<<":";
   printf("%s, line %d:D.f->d=%d, D.f->m=%d, D.f->a=%d\n",
          __FILE__,__LINE__,D.f->d,D.f->m,D.f->a);
@@ -55,7 +72,8 @@ assert((D.f->d>=1)&&(D.f->d<=31));
                               ,anio);
 #endif /*LMC_TEST_20200130_1*/
   out<<Cal_Greg->get_day_name(D.f)
-     <<" "<<D.f->d<<" "<<MES[D.f->m]<<" de "<<D.f->a<<"\n";
+     <<" "<<D.f->d<<" "<<MES[D.f->m]<<" de "<<D.f->a
+     <<"\nLugar:"<<D.lugar<<"     Horario:"<<D.horario<<"\n";
   delete Cal_Greg;
 #endif /*USING_ARREGLO*/
   for(unsigned int i=0;i<D.A.size();i++){
@@ -68,3 +86,28 @@ assert((D.f->d>=1)&&(D.f->d<=31));
 void Dia::set_TDT(float tdt){
   TD=TDT=tdt;
 }
+
+std::string Dia::set_lugar()        /*Friday 2020.01.31*/
+{
+  Calendario *C=new Calendario(f->a);
+  std::string dayName=string(C->get_day_name(f));
+  for(int i=0;i<7;i++){
+    if(dayName==day_place[i][0]){
+      return day_place[i][1];
+    }
+  }
+  return std::string("");
+}
+
+std::string Dia::set_horario()        /*Friday 2020.01.31*/
+{
+  Calendario *C=new Calendario(f->a);
+  std::string dayName=string(C->get_day_name(f));
+  for(int i=0;i<7;i++){
+    if(dayName==day_horario[i][0]){
+      return day_horario[i][1];
+    }
+  }
+  return std::string("");
+}
+

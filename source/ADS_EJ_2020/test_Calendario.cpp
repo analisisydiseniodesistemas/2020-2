@@ -29,24 +29,9 @@ using namespace std;
 
 /*ends definition of macro NACTIV()*/
 
-//int anio = 2020;    /*IS THIS ACTUALLY NEEDED?????????????*/   
-                    /**                           2020.01.27
-                      YES, see default constructor of class Fecha at 
-                      file ../CommonFiles/Fecha.h           */ 
-//Calendario *Cal_Greg;   /*Calendario Gregoriano*/
-
-//char MES[][32]={"static char MES[][32]",
-//	"enero","febrero","marzo","abril","mayo","junio","julio",
-//	"agosto","septiembre","octubre","noviembre","diciembre"
-//};
 
 int main(int argc,char *argv[])
 {
-  //Cal_Greg=new Calendario(2020);    /*Calendario Gregoriano*/
-  /*IS Cal_Greg ACTUALLY NEEDED??????????????  2020.01.23
-   *                                                    2020.01.27
-   *YES, it is used passing it the message get_day_name(Fecha*) */
-
   Calendario *Cal2020 = new Calendario(2020);
   Fecha f1(20,1,2020); /*Lunes 20 de enero de 2020 */
   Fecha f2(31,5,2020); /*Domingo 31 de mayo de 2020*/
@@ -86,10 +71,15 @@ int main(int argc,char *argv[])
   dias de clase de teor\'{i}a disponibles. Se usa usa constructor de Actividad
   pasando el nombre del Tema y la duracion del Tema/Actividad en horas.*/
   vector<Actividad*> VDA;
-  NACT("0.0 Presentaci\\'on del curso",1.5);
-  NACT("U.T. I Introducci\\'on a la ingenier\\'ia del software", 0.5);
-  NACT("1.1 Conceptos fundamentales del software (dato, informaci\\'on)",2.5);
-  NACT("1.2 Definici\\'on del software",2.0);
+  NACT("0.0 Presentaci\\'on de curso An\\'{a}lisis y Dise\\~{n}o de Sistemas",1.5);
+//  NACT("U.T. I Introducci\\'on a la ingenier\\'ia del software", 0.5);
+  NACT("1.1 Conceptos fundamentales del software (dato, informaci\\'on)",0.5);
+  NACT("Ejemplo de una funci\\'on medible {martes,...,lunes}<-->{0,1,...,6}",1.0);
+  NACT("Relaciones de equivalencia, s\\imbolo de UML para una clase",1.5);
+  NACT("1.1.1 Descripci\\'on de algoritmo",0.5);
+  NACT("Algoritmo de la ra\\'iz cuadrada",0.5);
+  NACT("Algoritmo de Euclides",0.5);
+  NACT("1.2 Definici\\'on del software",0.5);
   NACT("1.3 Sistemas de informaci\\'on",1.5);
   NACT("1.4 A\\'alisis de requisitos",2.5);
   NACT("1.5 Ciclos de vida",2.0);
@@ -129,10 +119,10 @@ int main(int argc,char *argv[])
   /*Finalmente se imprime en pantalla los dias a planear con las 
   actividades correspondientes por dia de clase entre las fechas 
   f1 y f2.*/
-  cout << "Los dias de clase te\\'orica a planificar son:" << endl;
-  for (unsigned int i = 0; i<VDDC.size(); i++) {
-    cout << *VDDC[i] << endl;
-  }
+//  cout << "Los dias de clase te\\'orica a planificar son:" << endl;
+//  for (unsigned int i = 0; i<VDDC.size(); i++) {
+//    cout << *VDDC[i] << endl;
+//  }
                    /*2019.10.29,2020.01.27*/
 
   /*Ahora la planeaci\'on (Enero-Mayo, 2020) */
@@ -173,8 +163,15 @@ int main(int argc,char *argv[])
   de Actividad pasando el nombre del Tema y la duracion del 
   Tema/Actividad en horas.*/
   vector<Actividad*> VDActividades;
+  NACTIV("U.T. I Introducci\\'on a la ingenier\\'ia del software", 0.5);
+  NACTIV("1.1 Conceptos fundamentales del software (dato, informaci\\'on)",1.0);
+  NACTIV("Programaci\\'on de la funci\\'on medible \
+{martes,...,lunes}<-->{0,1,...,6}",1.5);
+  NACTIV("P00 Uso de Cygwin:vim, g++, make; uso de github:git clone <repo url>,\
+git add <file name>, git commit -m\"<something>\",push origin master",1.5);
+  NACTIV("P00 REPASO de las actividades realizadas en el laboratorio",1.5);
   NACTIV("P01 Introducci\\'on a la ingenier\\'ia del software",1.5);
-  NACTIV("P02 Fundamentos de la programaci\\'on en C++",9.0);
+  NACTIV("P02 Fundamentos de la programaci\\'on en C++",5.0);
   NACTIV("P03 Manejo de arreglos unidimensionales y multidimensionales \
 con C++",4.0);
   NACTIV("P04 Uso de m\\'etodos (funciones) en C++", 4.0);
@@ -194,26 +191,22 @@ con C++",4.0);
   /*Finalmente se imprime en pantalla los dias a planear con las 
   actividades correspondientes por dia de clase entre las fechas 
   F1 y F2.*/
-  cout<<"Los dias de clase de laboratorio a planificar en 2020 son:"<<endl;
-  for (unsigned int i = 0;i<VDDClase.size();i++) {
-  	cout<<*VDDClase[i]<<endl;
-  }
+//  cout<<"Los dias de clase de laboratorio a planificar en 2020 son:"<<endl;
+//  for (unsigned int i = 0;i<VDDClase.size();i++) {
+//  	cout<<*VDDClase[i]<<endl;
+//  }
   vector<Dia*> V;
   cat_vddc(VDDC,VDDClase,V);
   ordenar_ddc(V);
+#ifndef NDEBUG
+  cout<<"V: "<<V.size()<<"\n";
+#endif
   cout<<"Los dias a planificar en 2020-2 para ADS son:"<<endl;
-  for (unsigned int i = 0;i<VDDClase.size();i++) {
+  for (unsigned int i = 0;i<V.size();i++) {
   	cout<<*V[i]<<endl;
   }
   delete Cal2020;  /*Borrar Calendario usado anteriormente*/
-  //delete Cal_Greg; /*Borrar Calendario Gregoriano a usar de ahora 
-  //                   en m\'as. Lo ``nuevo'' en la clase del objeto
-  //                   Cal_Greg es el m\'etodo 
-  //                   (char [][32] get_day_name(Fecha*))*/
-                   /*En realidad, los dos objetos (Cal2019 y Cal_Greg) 
-                     son de clase Calendario, as\'i que en una 
-                     siguiente versi\'on planeo usar solo una variable 
-                     global de tipo Calendario*/ 
+
   return 0;
 }//end main()
 

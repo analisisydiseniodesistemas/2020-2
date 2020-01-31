@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+#define NDEBUG
+#include <assert.h>
 #include "../CommonFiles/Calendario.h"
 #include "../CommonFiles/Fecha.h"
 #include "../CommonFiles/Dia.h"
@@ -30,11 +32,17 @@ show_vector_ddconf(vector<Dia*> vddc)
 void 
 cat_vddc(vector<Dia*>& v1,vector<Dia*>& v2,vector<Dia*>& v)
 {
+#ifndef NDEBUG
+  cout<<"v1: "<<v1.size()<<"\nv2: "<<v2.size()<<"\n";
+#endif
   for(int i=0;i<v1.size();i++){
     v.push_back(v1[i]);
   }
   for(int i=0;i<v2.size();i++){
     v.push_back(v2[i]);
   }
+#ifndef NDEBUG
+  cout<<"v: "<<v.size()<<"\n";
+#endif
 }
 
