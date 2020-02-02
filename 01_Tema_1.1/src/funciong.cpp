@@ -1,6 +1,6 @@
 /** funciong.cpp
  */
-char D[]={
+char D[7]={
   'm',   /*martes*/
   'M',   /*Mi\'{e}rcoles*/
   'j',   /*jueves*/

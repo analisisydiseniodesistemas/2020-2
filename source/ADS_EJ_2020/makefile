@@ -23,7 +23,7 @@ InVdOpS_AD2019.o:InVdOpS_AD2019.cpp
 	$(CC) $(MYCXXFLAGS) -c $^ -o $@
 util.o:../CommonFiles/util.cpp
 	$(CC) -DLEAPYEAR -c $^ -o $@
-$(EXE2):$(OBJETOSA) test_Calendario.o bubbles.o
+$(EXE2):$(OBJETOSA) test_Calendario.o bubbles.o ADS_data.o
 	$(CC) $^ -o $@
 CalendarioA.o:../CommonFiles/Calendario.cpp
 	$(CC) -DLEAPYEAR -c $^ -o $@
@@ -45,6 +45,8 @@ gettingdate.o:../CommonFiles/gettingdate.c
 	$(CC) -c $^ -o $@
 bubbles.o:../CommonFiles/bubbles.cpp
 	$(CC) -I../CommonFiles/ -c $^ -o $@
+ADS_data.o:ADS_data.cpp
+	$(CC) -I../CommonFiles/ -c $<
 $(EXE3):$(OBJETOSA) TestFecha.o gettingdate.o bubbles.o
 	$(CC) $^ -o $@
 clean:
