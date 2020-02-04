@@ -46,3 +46,16 @@ cat_vddc(vector<Dia*>& v1,vector<Dia*>& v2,vector<Dia*>& v)
 #endif
 }
 
+/**
+ * pre: vector<Dia*> v must be empty.
+ */ 
+void
+fill_vector_v(vector<Dia*>&V,vector<Dia*>&v,int Fi,int Ff)
+{
+  for(int i=0;i<V.size();i++){
+    if(((V[i]->f->F)>=Fi)&&((V[i]->f->F)<=Ff)){
+      v.push_back(V[i]);
+    }
+  }
+}
+

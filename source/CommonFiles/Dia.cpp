@@ -28,7 +28,8 @@ static char MES[][32]={"static char MES[][32]",
 "enero","febrero","marzo","abril","mayo","junio","julio",
 "agosto","septiembre","octubre","noviembre","diciembre"
 };
-//extern int anio;
+
+#ifdef ADS_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
   {"Lunes","S106"},
   {"Martes","C1"},
@@ -47,6 +48,27 @@ static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
   {"S\\'abado",""},
   {"Domingo",""}
 };
+#endif /*ADS_PLANNING*/
+#ifdef SOTR_PLANNING
+static std::string day_place[7][2]={      /*Friday 2020.01.31*/
+  {"Lunes",""},
+  {"Martes","C8"},
+  {"Mi\\'ercoles","C7"},
+  {"Jueves",""},
+  {"Viernes","C7"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
+  {"Lunes",""},
+  {"Martes","14:30-16:00"},
+  {"Mi\\'ercoles","14:30-16:00"},
+  {"Jueves",""},
+  {"Viernes","14:30-16:00"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+#endif /*SOTR_PLANNING*/
 
 /**2019.10.20 If it is necessary, for backward compatibility, 
  * define USING_ARREGLO at command in the make file.

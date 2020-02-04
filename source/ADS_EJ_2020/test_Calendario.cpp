@@ -17,18 +17,8 @@ using namespace std;
 #include "../CommonFiles/Actividad.h"
 #include "../CommonFiles/Asignacion.h"
 #include "../CommonFiles/AdA.h"
+#include <util.h>
 
-///*Nueva ACTividad*/
-//#define NACT(name,duracion)	\
-//	VDA.push_back(new Actividad(name, duracion ## f ))
-//
-///*ends definition of macro NACT()*/
-
-//#define NACTIV(name,duracion)	\
-//	VDActividades.push_back(new Actividad(name, duracion ## f ))
-//
-///*ends definition of macro NACTIV()*/
-//
 
 int main(int argc,char *argv[])
 {
@@ -143,11 +133,28 @@ void init_laboratory_themes(vector<Actividad*>&);
 #ifndef NDEBUG
   cout<<"V: "<<V.size()<<"\n";
 #endif
-  cout<<"Los dias a planificar en 2020-2 para ADS son:"<<endl;
-  for (unsigned int i = 0;i<V.size();i++) {
-  	cout<<*V[i]<<endl;
+  if(argc==1){
+    cout<<"Los dias a planificar en 2020-2 para ADS son:"<<endl;
+    for (unsigned int i = 0;i<V.size();i++) {
+      cout<<*V[i]<<endl;
+    }
+  }else if(argc==3){
+    int Fi,Ff;
+    Fi=atoi(argv[1]);
+    Ff=atoi(argv[2]);
+    vector<Dia*> v;
+void fill_vector_v(vector<Dia*>&,vector<Dia*>&,int,int);
+    fill_vector_v(V,v,Fi,Ff);
+    cout<<"D\\'{i}as a planificar\n";
+    for (unsigned int i = 0;i<v.size();i++) {
+      cout<<*v[i]<<endl;
+    }
+  }else if(argc>3){
+    cout<<"FORMA DE USO:";
+    printf("%s <yyyymmdd> YYYYMMDD\n",argv[0]);
   }
-  delete Cal2020;  /*Borrar Calendario usado anteriormente*/
+ 
+  delete Cal2020;  /*Borrar Calendario*/
 
   return 0;
 }//end main()

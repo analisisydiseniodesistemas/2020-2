@@ -20,6 +20,8 @@ typedef struct Fecha{
     return ((d==f.d)&&(m==f.m));
   }
   bool operator>(Fecha& f){return (F>f.F);}
+  bool operator>=(Fecha& f){return F>=f.F;}
+  bool operator<=(Fecha& f){return F<=f.F;}
 } Fecha;
 void printf_fecha(Fecha *,Calendario *);
 void show_vector_ddconf(vector<Dia*>);
