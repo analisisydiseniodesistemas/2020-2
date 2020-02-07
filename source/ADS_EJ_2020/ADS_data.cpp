@@ -25,10 +25,17 @@ init_classroom_themes(vector<Actividad*>& VDA)
   NACT("1.1 Conceptos fundamentales del software (dato, informaci\\'on)",0.5);
   NACT("Ejemplo de una funci\\'on medible {martes,...,lunes}<-->{0,1,...,6}",1.0);
   NACT("Relaciones de equivalencia, s\\imbolo de UML para una clase",1.5);
-  NACT("1.1.1 Descripci\\'on de algoritmo",0.5);
+  NACT("Descripci\\'on de algoritmo",0.5);
   NACT("Algoritmo de la ra\\'iz cuadrada",0.5);
   NACT("Algoritmo de Euclides",0.5);
   NACT("1.2 Definici\\'on del software",0.5);
+  NACT("1.2 Definici\\'on del software",0.25);
+  NACT("1.2.1 Caracter\\'isticas del software",0.25);
+  NACT("1.2.2 Importancia del software",0.5);
+  NACT("1.2.3 Complejidad del dise\\~{n}o y desarrollo del software",0.5);
+  NACT("1.2.4 La crisis del software",0.5);
+  NACT("1.2.5 Aspectos a considerar en el desarrollo del software",0.5);
+  NACT("1.2.6 Claves en el dise\\~no del software",0.5);
   NACT("1.3 Sistemas de informaci\\'on",1.5);
   NACT("1.4 A\\'alisis de requisitos",2.5);
   NACT("1.5 Ciclos de vida",2.0);

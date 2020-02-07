@@ -1,0 +1,33 @@
+# 1 "B_CompileTimeChecker.cpp"
+# 1 "<interno>"
+# 1 "<línea-de-orden>"
+# 1 "B_CompileTimeChecker.cpp"
+
+
+
+
+
+template<bool> struct CompileTimeChecker
+{
+  CompileTimeChecker(...);
+};
+
+template<> struct CompileTimeChecker<true> { };
+# 24 "B_CompileTimeChecker.cpp"
+template<class To,class From>
+To safe_reinterpret_cast(From from)
+{
+  { class ERROR_Destination_Type_Too_Narrow {}; struct CompileTimeChecker<(sizeof(From)<=sizeof(To)) != 0> CTC(ERROR_Destination_Type_Too_Narrow()); }
+                                 ;
+
+  return reinterpret_cast<To>(from);
+}
+
+int
+main(int argc,char *argv[])
+{
+  void *somePointer=malloc(1);
+  char c=safe_reinterpret_cast<char>(somePointer);
+
+  return 0;
+}
