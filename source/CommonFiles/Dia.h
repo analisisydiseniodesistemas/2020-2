@@ -25,7 +25,7 @@ public:
   void set_TDT(float tdt);
   friend ostream& operator<<(ostream& out,Dia& D);
 private:
-  std::string set_lugar();  /*friday 2020.01.31*/
+  std::string set_lugar();  /*friday 2020.01.31,2020.02.11*/
   std::string set_horario();  /*friday 2020.01.31*/
 };//end class Dia
 #endif /*DIA_H*/

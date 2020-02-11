@@ -10,10 +10,10 @@ CC=g++
 #CXXFLAGS +=-DUSING_ARREGLO
 CXXFLAGS +=-DCAL_GREGORIANO -I../CommonFiles/
 MYCXXFLAGS=-DUSING_ARREGLO
-#all:$(EXE) $(EXE1)
+
+default:$(EXE2) $(EXE3)
 ads:$(EXE2)
 sotr:$(EXE4)
-default:$(EXE3)
 $(EXE):$(OBJETOS) InVdOpS_AD2019.o 
 	$(CC) $(MYCXXFLAGS) $^ -o $@
 Calendario.o:../CommonFiles/Calendario.cpp
