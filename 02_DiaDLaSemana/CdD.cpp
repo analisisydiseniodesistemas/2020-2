@@ -12,7 +12,7 @@ void init_NM(unsigned int);
 extern string DIA[];
 extern unsigned int NM[];
 
-static string cdd[6][7];  /*celdas de dias*/
+static string cdd[7][7];  /*celdas de dias*/
 struct StringInt{
   string DayName;
   unsigned int Pos;       /*It represents kalend (day 1 of month) position*/
@@ -54,7 +54,7 @@ init_cdd(string kalend,unsigned int numDMes)
       cdd[1][c]=string(str);
     }
   }
-  unsigned int kalend2non=1+c-index;
+  unsigned int kalend2non=c-index;
   unsigned int fil; /*fila*/
   int DdM[]={  /*Dias del Mes*/
     31, /*enero*/
@@ -64,7 +64,7 @@ init_cdd(string kalend,unsigned int numDMes)
     28, /*febrero*/
 #endif /*LEAP_YEAR*/
     31,30,31,30,31,31,30,31,30,31 };
-  for(fil=2;fil<6;fil++){
+  for(fil=2;fil<7;fil++){
     for(c=0;c<=6;c++){
         if(1+kalend2non+c<10){
           sprintf(str,"  %d",1+kalend2non+c);
@@ -73,7 +73,7 @@ init_cdd(string kalend,unsigned int numDMes)
         }
         cdd[fil][c]=string(str);
     }
-    kalend2non=1+kalend2non+c;
+    kalend2non=kalend2non+c;
   }
 }/*end init_cdd()*/
 

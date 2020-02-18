@@ -28,7 +28,7 @@ Asignacion.o:../source/CommonFiles/Asignacion.cpp
 	$(CC) -I./ -c $< -o $@
 #######################################################
 CdD.o:CdD.cpp
-	$(CC) -c $< -o $@
+	$(CC) -DLEAP_YEAR -c $< -o $@
 testCdD.o:testCdD.cpp
 	$(CC) $(MYCXXFLAGS) -c $< -o $@
 clean:

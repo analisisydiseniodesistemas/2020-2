@@ -6,7 +6,7 @@ using namespace std;
 #include <stdio.h>
 void init_NM(unsigned int);
 string get_kalend(unsigned int,unsigned int);
-void init_cdd(string);
+void init_cdd(string,unsigned int);
 void print_cdd();
 
 int main(int argc,char *argv[])
@@ -44,7 +44,7 @@ extern char _binary_CdD_start[];
 
   for(char c=1;c<=12;c++){
     kalend=get_kalend(c,hoy.a);     
-    init_cdd(kalend);
+    init_cdd(kalend,c);
     cout<<"\n"<<mes[c]<<", "<<hoy.a<<"\n";
     print_cdd();
   }
