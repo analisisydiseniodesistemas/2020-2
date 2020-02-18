@@ -12,7 +12,7 @@ void init_NM(unsigned int);
 extern string DIA[];
 extern unsigned int NM[];
 
-static string cdd[2][7];  /*celdas de dias*/
+static string cdd[6][7];  /*celdas de dias*/
 struct StringInt{
   string DayName;
   unsigned int Pos;       /*It represents kalend (day 1 of month) position*/
@@ -28,7 +28,7 @@ static struct StringInt DayNameToPos[7]={   /*DayName To Position*/
 };
 
 void
-init_cdd(string kalend)
+init_cdd(string kalend,unsigned int numDMes)
 {
   char c=0;
   int index=-1;
@@ -54,21 +54,42 @@ init_cdd(string kalend)
       cdd[1][c]=string(str);
     }
   }
+  unsigned int kalend2non=1+c-index;
+  unsigned int fil; /*fila*/
+  int DdM[]={  /*Dias del Mes*/
+    31, /*enero*/
+#ifdef LEAP_YEAR
+    29, /*febrero*/
+#else
+    28, /*febrero*/
+#endif /*LEAP_YEAR*/
+    31,30,31,30,31,31,30,31,30,31 };
+  for(fil=2;fil<6;fil++){
+    for(c=0;c<=6;c++){
+        if(1+kalend2non+c<10){
+          sprintf(str,"  %d",1+kalend2non+c);
+        }else{ 
+          sprintf(str," %d",1+kalend2non+c);
+        }
+        cdd[fil][c]=string(str);
+    }
+    kalend2non=1+kalend2non+c;
+  }
 }/*end init_cdd()*/
 
 string 
 get_kalend(unsigned int numDMes,unsigned int year)
 {
   string kal;
-  init_NM(year);
+  init_NM(year); /*initialize the Magic Numbers array unsigned kNM[13]*/
   kal=DIA[(1+7-NM[numDMes])%7];
   return kal;
 }/*end get_kalend()*/
 
 void
-print_cdd()
+print_cdd()  /*print celda de dias*/
 {
-  for(unsigned int i=0;i<2;i++){
+  for(unsigned int i=0;i<6;i++){
     for(unsigned int j=0;j<7;j++){
       cout<<cdd[i][j];
     }

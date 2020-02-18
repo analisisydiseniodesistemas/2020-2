@@ -68,7 +68,7 @@ init_NM(unsigned int year)
   NM[0]=0;
   while(c<=12){
     NM[c]=primer_lunes_del_mes(c,year);
-    c++;
+    c++; /*c=c+1*/
   }
 }/*end init_NM()*/
 
