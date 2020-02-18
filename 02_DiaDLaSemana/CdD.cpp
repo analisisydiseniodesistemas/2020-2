@@ -12,7 +12,7 @@ void init_NM(unsigned int);
 extern string DIA[];
 extern unsigned int NM[];
 
-static string cdd[7][7];  /*celdas de dias*/
+static string cdd[8][7];  /*celdas de dias*/
 struct StringInt{
   string DayName;
   unsigned int Pos;       /*It represents kalend (day 1 of month) position*/
@@ -57,21 +57,25 @@ init_cdd(string kalend,unsigned int numDMes)
   unsigned int kalend2non=c-index;
   unsigned int fil; /*fila*/
   int DdM[]={  /*Dias del Mes*/
-    31, /*enero*/
+    0,31, /*enero*/
 #ifdef LEAP_YEAR
     29, /*febrero*/
 #else
     28, /*febrero*/
 #endif /*LEAP_YEAR*/
-    31,30,31,30,31,31,30,31,30,31 };
-  for(fil=2;fil<7;fil++){
+    31,30,31,30,31,31,30,31,30,31 };/*end int DdM[]*/
+  for(fil=2;fil<8;fil++){
     for(c=0;c<=6;c++){
         if(1+kalend2non+c<10){
           sprintf(str,"  %d",1+kalend2non+c);
         }else{ 
           sprintf(str," %d",1+kalend2non+c);
         }
-        cdd[fil][c]=string(str);
+        if(1+kalend2non+c<=DdM[numDMes%(sizeof(DdM)/sizeof(int))]){
+          cdd[fil][c]=string(str);
+        }else{
+          cdd[fil][c]="   "; /* three blanks */
+        }
     }
     kalend2non=kalend2non+c;
   }
@@ -89,11 +93,11 @@ get_kalend(unsigned int numDMes,unsigned int year)
 void
 print_cdd()  /*print celda de dias*/
 {
-  for(unsigned int i=0;i<6;i++){
+  for(unsigned int i=0;i<7;i++){
     for(unsigned int j=0;j<7;j++){
       cout<<cdd[i][j];
     }
     cout<<"\n";
   }
-}
+}/*end print_cdd()*/
 
