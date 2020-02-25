@@ -6,7 +6,7 @@ using std::vector;
 
 struct AddressTranslationArchitecture{
   unsigned int pageIndex;
-  unsigned int displacemente;
+  unsigned int displacement;
   vector<unsigned int> pageTable;
   
   unsigned int getBasePhysAddress(unsigned int pageI);
