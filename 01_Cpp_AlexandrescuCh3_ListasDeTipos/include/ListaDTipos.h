@@ -40,6 +40,14 @@ struct Typelist
   Typelist<T1, TYPELIST_3(T2, T3, T4) >
 //...
 //#define TYPELIST_50(T1,T2,...,T50)	...
+//
+//Each macro uses the previous one, which makes it easy for the 
+//library user to extend the upper limit, should this necessity 
+//emerge.
+//Now the earlier type definition of SignedIntegrals can be 
+//expressed in a much more pleasant way: 
+//typedef TYPELIST_4(signed char, short int, int, long int)
+//   SignedIntegrals;
 
 //Linearizing typelist creation is only the beginning. Typelist 
 //manipulation is still very clumsy. For instance, accessing the 
