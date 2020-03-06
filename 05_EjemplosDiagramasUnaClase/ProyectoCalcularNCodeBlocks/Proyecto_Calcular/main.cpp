@@ -19,7 +19,7 @@ int main()
     cout<<"C.radio="<<C.radio<<endl;
     cout << "Cantidad de instancias de la clase Calcular: "
          << C1.count<<endl;
-
+/**********************************************************/
     struct vectorDInt V={3,new int[3]};
     struct vectorDInt V1;
 
