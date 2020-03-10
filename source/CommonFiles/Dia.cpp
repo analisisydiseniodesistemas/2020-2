@@ -29,6 +29,27 @@ static char MES[][32]={"static char MES[][32]",
 "agosto","septiembre","octubre","noviembre","diciembre"
 };
 
+#ifdef EDO_PLANNING
+static std::string day_place[7][2]={      /*Friday 2020.01.31*/
+  {"Lunes",""},
+  {"Martes","2/o ICE"},
+  {"Mi\\'ercoles",""},
+  {"Jueves",""},
+  {"Viernes","2/o ICE"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
+  {"Lunes",""},
+  {"Martes","11:30-13:30"},
+  {"Mi\\'ercoles",""},
+  {"Jueves",""},
+  {"Viernes","11:30-13:30"},
+  {"S\\'abado",""},
+  {"Domingo",""}
+};
+#endif /*EDO_PLANNING*/
+
 #ifdef ADS_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
   {"Lunes","S106"},

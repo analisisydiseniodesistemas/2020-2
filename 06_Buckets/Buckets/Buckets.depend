@@ -1,4 +1,14 @@
 # depslib dependency file v1.0
-1583452547 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\06_buckets\buckets\main.cpp
+1583882399 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\06_buckets\buckets\main.cpp
 	<stdio.h>
+	<assert.h>
+	"main.h"
+
+1583882963 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\06_buckets\buckets\funciones.cpp
+	<iostream>
+	<vector>
+
+1583882871 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\06_buckets\buckets\main.h
+	<iostream>
+	<vector>
 

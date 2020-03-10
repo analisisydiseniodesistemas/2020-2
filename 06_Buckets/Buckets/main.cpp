@@ -1,21 +1,20 @@
 //#include <iostream>
 #include <stdio.h>
-
-#define NELEM(x)	((sizeof(x))/(sizeof((x)[0])))
-
-#define TEST
-
+//#define NDEBUG
+#include <assert.h>
+#include "main.h"
 using namespace std;
-
 unsigned int bucket[256];
-
-/** suma de elementos
-*/
-unsigned int selem(unsigned int b[NELEM(bucket)],int size);
-
 int main()
 {
     unsigned int i;
+    char sa[]="Sapere aude";
+    string stringsa=string(sa);
+    vector<string> vs;         /*vector string*/
+    cout<<stringsa<<"\n";
+    fill_string_vec(stringsa,vs);
+    print_vector_string(vs);
+    assert(1==0);
     char str[]="Qui est in caelis, santificatur nomen tuum,\
  adveniat regnum tuum, fiat voluntas tua, cicut in terra et in caelo";
     printf("%s\n",str);
@@ -30,15 +29,11 @@ int main()
 
 unsigned int selem(unsigned int b[256],int s)
 {
-#ifdef TEST
-    int i,x,z;
+    int i,suma=0;//,x,z;
     for(i=0; i<=(int)NELEM(bucket); i++)
     {
-       x=i;
-       z=i+x;
-
+       suma=suma+b[i];
     }
-    return z;
-#endif // TEST
+    return suma;
 }/*end selem()*/
 
