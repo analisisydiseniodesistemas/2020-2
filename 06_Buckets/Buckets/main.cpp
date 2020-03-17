@@ -1,20 +1,30 @@
-//#include <iostream>
+#include <iostream>
 #include <stdio.h>
-//#define NDEBUG
+
+#define NDEBUG
 #include <assert.h>
 #include "main.h"
+
 using namespace std;
 unsigned int bucket[256];
-int main()
+
+int main(int argc,char *argv[])
 {
-    unsigned int i;
+    uint i;
     char sa[]="Sapere aude";
     string stringsa=string(sa);
+
     vector<string> vs;         /*vector string*/
     cout<<stringsa<<"\n";
     fill_string_vec(stringsa,vs);
     print_vector_string(vs);
-    assert(1==0);
+
+    stringsa="Assinus,  assinum  a fricat";
+    vs.clear();
+    fill_string_vec(stringsa,vs);
+    printf("/******************************************/\n");
+    print_vector_string(vs);
+
     char str[]="Qui est in caelis, santificatur nomen tuum,\
  adveniat regnum tuum, fiat voluntas tua, cicut in terra et in caelo";
     printf("%s\n",str);
@@ -23,17 +33,12 @@ int main()
         bucket[(int)str[i]]++;
     }
     printf("suma=%d\n",selem(bucket,NELEM(bucket)));
+#ifdef ADS_20202_1
+    printf("Checking macro ADS_20202_1 definition\n");
+    assert(1==0);
+#endif // ADS_20202_1
 
     return 0;
 }/*end main()*/
 
-unsigned int selem(unsigned int b[256],int s)
-{
-    int i,suma=0;//,x,z;
-    for(i=0; i<=(int)NELEM(bucket); i++)
-    {
-       suma=suma+b[i];
-    }
-    return suma;
-}/*end selem()*/
 

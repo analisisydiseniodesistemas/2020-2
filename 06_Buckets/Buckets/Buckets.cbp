@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DADS_20202_1" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,7 +31,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add option="-fexceptions" />
+			<Add option="-fexceptions  -DADS_20202_1" />
 		</Compiler>
 		<Unit filename="funciones.cpp" />
 		<Unit filename="main.cpp" />
