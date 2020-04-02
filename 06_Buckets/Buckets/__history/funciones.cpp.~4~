@@ -81,11 +81,11 @@ void print_vector_string(vector<std::string> v)
 	unsigned int i;
 	for(i=0;i<v.size();i++)
 	{
-#ifndef CPPBUILDER
+#ifndef NOCPPBUILDER
 		cout<<v[i]<<"\n";
 #else
 		printf("%s\n",&(v[i][0]));
-#endif /*CPPBUILDER*/
+#endif /*NOCPPBUILDER*/
     }
 }/*end print_vector_string()*/
 
@@ -93,11 +93,11 @@ bool is_included(std::string word,vector<string> word_list)
 {
   for(uint i=0;i<word_list.size();i++)
   {
-#ifndef CPPBUILDER
+#ifndef NOCPPBUILDER
 	if(word==word_list[i])
 #else
     if(strcmp(&word[0],&(word_list[i][0])))
-#endif /*CPPBUILDER*/
+#endif /*NOCPPBUILDER*/
       return true;
   }
   return false;
@@ -118,11 +118,11 @@ uint mapa(string word,StringYuint * syu_pt,uint size)
   for(uint i=0;i<size;i++)
   {
 //cout<<"mapa() -->syu_pt[i].palabra="<<syu_pt[i].palabra<<"\n";
-#ifndef CPPBUILDER
+#ifndef NOCPPBUILDER
 	if(word==syu_pt[i].palabra)
 #else
     if(strcmp(&word[0],&(syu_pt[i].palabra[0])))
-#endif /*CPPBUILDER*/
+#endif /*NOCPPBUILDER*/
       return syu_pt[i].I;   /*a positive integer (by construction)*/
   }
   return 0;

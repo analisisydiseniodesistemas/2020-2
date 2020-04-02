@@ -2,13 +2,7 @@
 #ifndef MAIN_H
 #include <iostream>
 #include <vector>
-//#define CPPBUILDER        /*if using Embarcadero RAD Studio 2009*/
-#ifndef CPPBUILDER
 #include <stdbool.h>
-#else
-#define true	1
-#define false	0
-#endif /*NOCPPBUILDER*/
 using namespace std;
 #define NELEM(x)	((sizeof(x))/(sizeof((x)[0])))
 typedef unsigned int uint;
@@ -31,7 +25,7 @@ struct StringYuint{
   string palabra;
   uint N;        /*cantidad de veces que aparece el string palabra*/
   uint I;        /*n\'umero de \'indice del string palabra*/
-static uint count;/*variable de clase para contar objetos e inicializar I*/
+static uint count;/*variable de clase para contar objetos e inicializar I*/  
   StringYuint(){ }
   StringYuint(string);
 };/*end struct StringYuint*/

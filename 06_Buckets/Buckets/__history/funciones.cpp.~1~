@@ -12,7 +12,7 @@ uint selem(unsigned int b[NELEM(bucket)],int s)
   int i,suma=0;//,x,z;
   for(i=0; i<=(int)NELEM(bucket); i++)
   {
-	 suma=suma+b[i];
+     suma=suma+b[i];
   }
   return suma;
 }/*end selem()*/
@@ -23,69 +23,65 @@ uint selem(unsigned int b[NELEM(bucket)],int s)
   pre:string_vec.size()=0
 */
 void fill_string_vec(string linea,
-					 vector<string>& string_vec)
+                     vector<string>& string_vec)
 {
   uint i,inic=-1,fin;
   std::string str_tmp;
   /**detect if string is fill of ' 's*/
   for(i=0;i<linea.size();i++)
   {
-	if(linea[i]==' ')
-		continue;
-	inic=i;
-	break;
+    if(linea[i]==' ')
+        continue;
+    inic=i;
+    break;
   }
   if(inic<0)
-	goto out;
+    goto out;
   while(i<=linea.size()-1)
   {
-	for(i=inic;i<linea.size();i++)
-	{
-	  if(linea[i]==' ')
-		continue;
-	  inic=i;
-	  break;
-	}
-	for(i=inic;i<linea.size();i++)
-	{
-	  if((' '==linea[i])||('\0'==linea[i])||(i==(linea.size()-1))){
-		 fin=i;
-		 str_tmp=linea.substr(inic,fin-inic+1);
-
-		 //print_index_char_of_string(str_tmp);
-		 if(str_tmp.size()>=2){
-		 /**Quitar coma --si la hay--*/
-		 if(str_tmp[str_tmp.size()-2]==',')
-			str_tmp=str_tmp.substr(0,str_tmp.size()-2);
-		 /**Quitar punto y coma --si lo hay--*/
-		 if(str_tmp[str_tmp.size()-2]==';')
-			str_tmp=str_tmp.substr(0,str_tmp.size()-2);
-		 /**Quitar punto --si lo hay--*/
-		 if(str_tmp[str_tmp.size()-2]=='.')
-			str_tmp=str_tmp.substr(0,str_tmp.size()-2);
-		 }
-		 if(!is_included(str_tmp,string_vec))
-		   string_vec.push_back(str_tmp);
-		 inic=fin+1;
-		 break;
-	   }
-	 }/*end for()*/
+    for(i=inic;i<linea.size();i++)
+    {
+      if(linea[i]==' ')
+        continue;
+      inic=i;
+      break;
+    }
+    for(i=inic;i<linea.size();i++)
+    {
+      if((' '==linea[i])||('\0'==linea[i])||(i==(linea.size()-1))){
+         fin=i;
+         str_tmp=linea.substr(inic,fin-inic+1);
+        
+         //print_index_char_of_string(str_tmp);
+         if(str_tmp.size()>=2){
+         /**Quitar coma --si la hay--*/
+         if(str_tmp[str_tmp.size()-2]==',')
+            str_tmp=str_tmp.substr(0,str_tmp.size()-2);
+         /**Quitar punto y coma --si lo hay--*/
+         if(str_tmp[str_tmp.size()-2]==';')
+            str_tmp=str_tmp.substr(0,str_tmp.size()-2);
+         /**Quitar punto --si lo hay--*/          
+         if(str_tmp[str_tmp.size()-2]=='.')
+            str_tmp=str_tmp.substr(0,str_tmp.size()-2);
+         }
+         if(!is_included(str_tmp,string_vec))
+           string_vec.push_back(str_tmp);
+         inic=fin+1;
+         break;
+       }
+     }/*end for()*/ 
   }/*end while()*/
 
 out:
-	return;
+    return;
 }/*end fill_string_vec()*/
 
-void print_vector_string(vector<std::string> v)
+void print_vector_string(vector<string> v)
 {
-	unsigned int i;
-	for(i=0;i<v.size();i++)
-	{
-#ifndef CPPBUILDER
-		cout<<v[i]<<"\n";
-#else
-		printf("%s\n",&(v[i][0]));
-#endif /*CPPBUILDER*/
+    unsigned int i;
+    for(i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<"\n";
     }
 }/*end print_vector_string()*/
 
@@ -93,11 +89,7 @@ bool is_included(std::string word,vector<string> word_list)
 {
   for(uint i=0;i<word_list.size();i++)
   {
-#ifndef CPPBUILDER
-	if(word==word_list[i])
-#else
-    if(strcmp(&word[0],&(word_list[i][0])))
-#endif /*CPPBUILDER*/
+    if(word==word_list[i])
       return true;
   }
   return false;
@@ -118,11 +110,7 @@ uint mapa(string word,StringYuint * syu_pt,uint size)
   for(uint i=0;i<size;i++)
   {
 //cout<<"mapa() -->syu_pt[i].palabra="<<syu_pt[i].palabra<<"\n";
-#ifndef CPPBUILDER
-	if(word==syu_pt[i].palabra)
-#else
-    if(strcmp(&word[0],&(syu_pt[i].palabra[0])))
-#endif /*CPPBUILDER*/
+    if(word==syu_pt[i].palabra)
       return syu_pt[i].I;   /*a positive integer (by construction)*/
   }
   return 0;

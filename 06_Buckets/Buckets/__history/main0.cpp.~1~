@@ -39,9 +39,7 @@ int main(int argc,char *argv[])
         if(bucket[i])
             printf("%c %5d\n",i,bucket[i]);
     }
-#ifdef CPPBUILDER
-	getchar();
-#endif
+
     return 0;
 }/*end main()*/
 

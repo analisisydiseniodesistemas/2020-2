@@ -34,8 +34,8 @@
 			<Add option="-fexceptions  -DADS_20202_1" />
 		</Compiler>
 		<Unit filename="funciones.cpp" />
-		<Unit filename="main.cpp" />
 		<Unit filename="main.h" />
+		<Unit filename="main0.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
