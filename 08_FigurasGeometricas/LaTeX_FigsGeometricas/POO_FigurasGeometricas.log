@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.16)  2 APR 2020 00:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.16)  8 APR 2020 23:46
 entering extended mode
 **./POO_FigurasGeometricas.tex
 (POO_FigurasGeometricas.tex
@@ -480,23 +480,317 @@ Overfull \hbox (46.03769pt too wide) in paragraph at lines 39--40
 [1
 
 {C:/Users/LMC/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(POO_FigurasGeometricas.aux) ) 
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 84--84
+[]\OT1/cmtt/m/n/10.95 #include <SDL.h> /* Add -I/usr/include/SDL/ in <command l
+ine>/<make file> */[] 
+ []
+
+[2]
+Overfull \hbox (14.15393pt too wide) in paragraph at lines 128--131
+\OT1/cmr/m/n/10.95 A con-tin-uacion se in-cluyen los codigos fuente (C++) de 
+los archivos \OT1/cmtt/m/n/10.95 Forma.cpp,
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 128--131
+\OT1/cmtt/m/n/10.95 Cuadro.cpp, Circulo.cpp, Bresenhamslinealgorithm.cpp, Elips
+e.cpp,
+ []
+
+
+Overfull \hbox (42.40814pt too wide) in paragraph at lines 149--149
+[]\OT1/cmtt/m/n/10.95 #include <Forma.h> /* Add -I./include in <command line>/<
+make file> */[] 
+ []
+
+[3]
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 149--149
+[]\OT1/cmtt/m/n/10.95 SDL_Surface *Forma::screen=NULL;   /*It will be modifyied
+ in main function*/[] 
+ []
+
+
+Overfull \hbox (59.6542pt too wide) in paragraph at lines 162--162
+[]\OT1/cmtt/m/n/10.95 #include <Cuadro.h>   /* Add -I./include in <command line
+>/<make file> */[] 
+ []
+
+
+Overfull \hbox (65.4029pt too wide) in paragraph at lines 174--174
+[]\OT1/cmtt/m/n/10.95 #include <Circulo.h>   /* Add -I./include in <command lin
+e>/<make file> */[] 
+ []
+
+[4]
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 275--275
+[]\OT1/cmtt/m/n/10.95 #include <types.h>   /* Add -I./include in <command line>
+/<make file> */[] 
+ []
+
+
+Overfull \hbox (59.6542pt too wide) in paragraph at lines 275--275
+[]        \OT1/cmtt/m/n/10.95 Uint8 *p = (Uint8 *)surface->pixels + y * surface
+->pitch + x * 4;[] 
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 275--275
+[]\OT1/cmtt/m/n/10.95 /** Function to draw a line on a SDL_Surface from point (
+x1,y1)[] 
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  to point (x2,y2). Longitud es un tipo definido por el
+ usuario[] 
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  (no una clase) que oculta la verdadera implementaci\'
+on de la[] 
+ []
+
+
+Overfull \hbox (30.91077pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  longitud (de tal modo que pueda ser entera o real, po
+r ejemplo).[] 
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  El par\'ametro color de tipo Uint32 se puede obtener 
+usando[] 
+ []
+
+
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  la funci\'on Uint32 SDL_MapRGB(const SDL_PixelFormat 
+* const format,[] 
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 275--275
+[]                        \OT1/cmtt/m/n/10.95 const Uint8 r, const Uint8 g, con
+st Uint8 b);[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  Uint32 black = SDL_MapRGB(screen->format, 0x00, 0x00,
+ 0x00);[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  Uint32 white = SDL_MapRGB(screen->format, 0xFF, 0xFF,
+ 0xFF);[] 
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 275--275
+[] \OT1/cmtt/m/n/10.95 *  donde screen es de tipo SDL_Surface *, y como puede c
+omprobarse[] 
+ []
+
+[5] [6]
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 float pi  = 3.141592653589793238462643383279502884197
+16939937510;[] 
+ []
+
+[7]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 //drew  28 lines with   4x4  circle with precision of
+ 150 0ms[] 
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 //drew 132 lines with  25x14 circle with precision of
+ 150 0ms[] 
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 //drew 152 lines with 100x50 circle with precision of
+ 150 3ms[] 
+ []
+
+
+Overfull \hbox (30.91077pt too wide) in paragraph at lines 363--363
+[]                         \OT1/cmtt/m/n/10.95 // value of 1 will draw a diamon
+d, 27 makes[] 
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 float theta = 0;     // angle that will be increased 
+each loop[] 
+ []
+
+
+Overfull \hbox (94.14633pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 //draw line from previous point to new point, ONL
+Y if point incremented[] 
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 if( (x != x1) || (y != y1) )//only draw if coordi
+nate changed[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 + x, y0 - y,    x0 + x1, y0 - 
+y1 );//quadrant TR[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 - x, y0 - y,    x0 - x1, y0 - 
+y1 );//quadrant TL[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 - x, y0 + y,    x0 - x1, y0 + 
+y1 );//quadrant BL[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 + x, y0 + y,    x0 + x1, y0 + 
+y1 );//quadrant BR[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 363--363
+[]            \OT1/cmtt/m/n/10.95 Line(r, x0 + x, y0 - y,    x0 + x1, y0 - y1,c
+olor);//quadrant TR[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 363--363
+[]            \OT1/cmtt/m/n/10.95 Line(r, x0 - x, y0 - y,    x0 - x1, y0 - y1,c
+olor);//quadrant TL[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 363--363
+[]            \OT1/cmtt/m/n/10.95 Line(r, x0 - x, y0 + y,    x0 - x1, y0 + y1,c
+olor);//quadrant BL[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 363--363
+[]            \OT1/cmtt/m/n/10.95 Line(r, x0 + x, y0 + y,    x0 + x1, y0 + y1,c
+olor);//quadrant BR[] 
+ []
+
+[8]
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 363--363
+[]    \OT1/cmtt/m/n/10.95 //arc did not finish because of rounding, so finish t
+he arc[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 + x, y0 - y,    x0 + x1, y0 - 
+y1 );//quadrant TR[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 - x, y0 - y,    x0 - x1, y0 - 
+y1 );//quadrant TL[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 - x, y0 + y,    x0 - x1, y0 + 
+y1 );//quadrant BL[] 
+ []
+
+
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 363--363
+[]\OT1/cmtt/m/n/10.95 //SDL_RenderDrawLine(r, x0 + x, y0 + y,    x0 + x1, y0 + 
+y1 );//quadrant BR[] 
+ []
+
+
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 Line(r, x0 + x, y0 - y,    x0 + x1, y0 - y1,color
+);//quadrant TR[] 
+ []
+
+
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 Line(r, x0 - x, y0 - y,    x0 - x1, y0 - y1,color
+);//quadrant TL[] 
+ []
+
+
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 Line(r, x0 - x, y0 + y,    x0 - x1, y0 + y1,color
+);//quadrant BL[] 
+ []
+
+
+Overfull \hbox (53.90552pt too wide) in paragraph at lines 363--363
+[]        \OT1/cmtt/m/n/10.95 Line(r, x0 + x, y0 + y,    x0 + x1, y0 + y1,color
+);//quadrant BR[] 
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 396--396
+[]                 \OT1/cmtt/m/n/10.95 Longitud radiusX,Longitud radiusY,Color 
+color);[] 
+ []
+
+[9] [10]
+Overfull \hbox (71.15158pt too wide) in paragraph at lines 455--455
+[]   \OT1/cmtt/m/n/10.95 printf("No se puede inicializar el modo gr\\'afico: \n
+",SDL_GetError());[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 455--455
+[]  \OT1/cmtt/m/n/10.95 Color white = SDL_MapRGB(Q1->get_sdl_surface()->format,
+ 0xFF, 0xFF, 0xFF);[] 
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 455--455
+[]  \OT1/cmtt/m/n/10.95 SDL_Flip(Forma::get_sdl_surface());            /*Added 
+by LMC 2020.03.26*/[] 
+ []
+
+[11]
+Overfull \hbox (65.4029pt too wide) in paragraph at lines 482--482
+[]\OT1/cmtt/m/n/10.95 #CXXFLAGS += -I./include/ -I/usr/include/SDL/ -D_GNU_SOUR
+CE=1 -D_REENTRANT[] 
+ []
+
+[12] (POO_FigurasGeometricas.aux) ) 
 Here is how much of TeX's memory you used:
- 12855 strings out of 492973
- 276197 string characters out of 3135938
- 318233 words of memory out of 3000000
- 16501 multiletter control sequences out of 15000+200000
- 7638 words of font info for 27 fonts, out of 3000000 for 9000
+ 12860 strings out of 492973
+ 276258 string characters out of 3135938
+ 320236 words of memory out of 3000000
+ 16505 multiletter control sequences out of 15000+200000
+ 8411 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,428b,876s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on POO_FigurasGeometricas.pdf (1 page, 62532 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on POO_FigurasGeometricas.pdf (12 pages, 103524 bytes).
 PDF statistics:
- 29 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
