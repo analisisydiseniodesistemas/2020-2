@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.16)  8 APR 2020 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.8.16)  19 APR 2020 14:25
 entering extended mode
 **./POO_FigurasGeometricas.tex
 (POO_FigurasGeometricas.tex
@@ -773,24 +773,30 @@ Overfull \hbox (65.4029pt too wide) in paragraph at lines 482--482
 CE=1 -D_REENTRANT[] 
  []
 
-[12] (POO_FigurasGeometricas.aux) ) 
+<images/Salidabasica.JPG, id=45, 484.05844pt x 386.94562pt>
+File: images/Salidabasica.JPG Graphic file (type jpg)
+<use images/Salidabasica.JPG>
+Package pdftex.def Info: images/Salidabasica.JPG  used on input line 488.
+(pdftex.def)             Requested size: 341.43306pt x 272.9443pt.
+[12 <./images/Salidabasica.JPG>] [13] (POO_FigurasGeometricas.aux) ) 
 Here is how much of TeX's memory you used:
- 12860 strings out of 492973
- 276258 string characters out of 3135938
+ 12867 strings out of 492973
+ 276396 string characters out of 3135938
  320236 words of memory out of 3000000
- 16505 multiletter control sequences out of 15000+200000
+ 16509 multiletter control sequences out of 15000+200000
  8411 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,62p,428b,876s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on POO_FigurasGeometricas.pdf (12 pages, 103524 bytes).
+<C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb>
+Output written on POO_FigurasGeometricas.pdf (13 pages, 132252 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
