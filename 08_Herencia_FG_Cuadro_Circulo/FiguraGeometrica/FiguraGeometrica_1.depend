@@ -1,13 +1,20 @@
 # depslib dependency file v1.0
-1592893665 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\main.cpp
+1592895322 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\main_1.cpp
 	<iostream>
 	"./include/Cuadro.h"
+	"./include/Circulo.h"
 
 1592889348 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\include\cuadro.h
 	"FiguraGeometrica.h"
 
 1592898435 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\include\figurageometrica.h
 	<iostream>
+
+1592894316 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\include\circulo.h
+	"FiguraGeometrica.h"
+
+1592895713 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\src\circulo.cpp
+	"../include/Circulo.h"
 
 1592889765 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\08_herencia_fg_cuadro_circulo\figurageometrica\src\cuadro.cpp
 	"../include/Cuadro.h"

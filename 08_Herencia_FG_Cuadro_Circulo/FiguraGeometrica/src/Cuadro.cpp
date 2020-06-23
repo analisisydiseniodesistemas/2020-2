@@ -1,4 +1,4 @@
-#include "Cuadro.h"
+#include "../include/Cuadro.h"
 
 Cuadro::Cuadro(double base,double altura):FiguraGeometrica("Cuadro")  //inicializador
 {
@@ -18,5 +18,12 @@ double Cuadro::area()
   return Base*Altura;
 }
 
+
+std::ostream& operator<<(std::ostream& out,Cuadro& Cuad)
+{
+    out<<Cuad.nombreDFigura<<" Base="<<Cuad.Base
+       <<" Altura="<<Cuad.Altura<<"\n";
+       return out;
+}/*end operator<<()*/
 
 
