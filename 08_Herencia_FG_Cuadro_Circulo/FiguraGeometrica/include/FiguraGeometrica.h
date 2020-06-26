@@ -11,6 +11,7 @@ class FiguraGeometrica
         FiguraGeometrica(const FiguraGeometrica& other);
         virtual double area()=0;   //un metodo virtual puro ( = 0 ) => la clase es abstracta
                                    //No se puede instanciar objetos de una clase abstracta.
+        virtual double sumarArea(FiguraGeometrica* FGPt)=0;
         friend std::ostream& operator<<(std::ostream&,FiguraGeometrica&);
 };/*end class FiguraGeometrica*/
 

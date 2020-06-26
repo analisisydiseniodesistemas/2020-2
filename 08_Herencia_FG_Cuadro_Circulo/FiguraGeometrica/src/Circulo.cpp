@@ -16,6 +16,10 @@ double Circulo::area()
   return 3.1416*Radio*Radio;
 }
 
+double Circulo::sumarArea(FiguraGeometrica* FGPt)
+{
+    return (area()+FGPt->area());
+}
 
 std::ostream& operator<<(std::ostream& out,Circulo& Circ)
 {

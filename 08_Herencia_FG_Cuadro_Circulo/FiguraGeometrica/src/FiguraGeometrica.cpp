@@ -16,3 +16,14 @@ std::ostream& operator<<(std::ostream& out,FiguraGeometrica& FG)
     out<<FG.nombreDFigura;
     return out;
 }
+
+//double FiguraGeometrica::area()
+//{
+//    return 0.0;
+//}
+
+//double FiguraGeometrica::sumarArea(FiguraGeometrica* FGPt)
+//{
+//    return 0.0;
+//}
+

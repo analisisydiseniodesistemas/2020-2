@@ -9,6 +9,7 @@ class Circulo : public FiguraGeometrica
         Circulo(double radio);// Constructor
         Circulo(const Circulo& other);      // Constructor de copia
         virtual double area();
+        virtual double sumarArea(FiguraGeometrica* FGPt);
     friend  std::ostream& operator<<(std::ostream& out,Circulo& Circ);
 
     protected:

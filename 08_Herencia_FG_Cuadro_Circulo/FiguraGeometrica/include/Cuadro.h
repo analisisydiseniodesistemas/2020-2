@@ -9,6 +9,7 @@ class Cuadro : public FiguraGeometrica
         Cuadro(double base,double altura);// Constructor
         Cuadro(const Cuadro& other);      // Constructor de copia
         virtual double area();
+        virtual double sumarArea(FiguraGeometrica* FGPt);
     friend  std::ostream& operator<<(std::ostream& out,Cuadro& Cuad);
 
     protected:

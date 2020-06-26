@@ -18,6 +18,11 @@ double Cuadro::area()
   return Base*Altura;
 }
 
+double Cuadro::sumarArea(FiguraGeometrica* FGPt)
+{
+    return (area()+FGPt->area());
+}
+
 
 std::ostream& operator<<(std::ostream& out,Cuadro& Cuad)
 {
