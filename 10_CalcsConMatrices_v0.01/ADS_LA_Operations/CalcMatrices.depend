@@ -1,0 +1,56 @@
+# depslib dependency file v1.0
+1591057480 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\vector.cpp
+	<cmath>
+	<iostream>
+	<cassert>
+	"Vector.h"
+
+1591056655 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\vector.h
+
+1593241086 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\testcalcmatrices.cpp
+	<iostream>
+	<typeinfo>
+	"./include/Vector.h"
+	"./include/Entrada.h"
+	"./include/Escalar.h"
+	"./include/Polinomio.h"
+	"./include/Matriz.h"
+
+1593147883 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\matriz.h
+	<iostream>
+	"Entrada.h"
+
+1593314028 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\matriz.cpp
+	<iostream>
+	<iomanip>
+	<typeinfo>
+	<assert.h>
+	"../include/Entrada.h"
+	"../include/Escalar.h"
+	"../include/Polinomio.h"
+	"Matriz.h"
+
+1593313137 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\entrada.cpp
+	<iostream>
+	"Entrada.h"
+
+1593313497 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\entrada.h
+	<iostream>
+
+1593290335 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\escalar.cpp
+	<stdio.h>
+	"Escalar.h"
+	"Polinomio.h"
+
+1593313964 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\escalar.h
+	"Entrada.h"
+
+1593313787 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\polinomio.cpp
+	"Escalar.h"
+	"Polinomio.h"
+
+1593313580 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\polinomio.h
+	<vector>
+	<Entrada.h>
+	"Escalar.h"
+
