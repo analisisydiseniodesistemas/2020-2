@@ -16,14 +16,14 @@ Entrada::Entrada(std::string nameOfEntry)
     nombreDEntrada=nameOfEntry;
 }
 
-Entrada* Entrada::operator*(Entrada* other)
-{
-    return other;/*REVISAR QUE ESTA FUNCION EN REALIDAD NO SE USE*/
-                 /*Y QUE EN SU LUGAR SE UTILICE LA FUNCION */
-                 /*Escalar::operator*(Escalar*) O BIEN LA FUNCION*/
-                 /*Escalar::operator*(PolOrderOne*) */
-                 /*PARA ELLO, ESTA FUNCION SE DECLARO COMO virtual*/
-}/*end Entrada::operator*()*/
+//Entrada* Entrada::operator*(Entrada* other)
+//{
+//    return other;/*REVISAR QUE ESTA FUNCION EN REALIDAD NO SE USE*/
+//                 /*Y QUE EN SU LUGAR SE UTILICE LA FUNCION */
+//                 /*Escalar::operator*(Escalar*) O BIEN LA FUNCION*/
+//                 /*Escalar::operator*(PolOrderOne*) */
+//                 /*PARA ELLO, ESTA FUNCION SE DECLARO COMO virtual*/
+//}/*end Entrada::operator*()*/
 
 /*THIS IS A VIRTUAL METHOD OF Entrada CLASS*/
 Entrada* Entrada::operator+(Entrada* other)

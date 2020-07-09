@@ -16,6 +16,8 @@ class Matriz
         Matriz& operator=(const Matriz& other);
         Matriz operator+(const Matriz& M1);
         Matriz operator-(const Matriz& M1);
+        Matriz operator*(Matriz other);
+
     friend std::ostream& operator<<(std::ostream& out,Matriz& rhs);
 
 //    friend Matriz lambdaTimesIdentity(const double lambda,

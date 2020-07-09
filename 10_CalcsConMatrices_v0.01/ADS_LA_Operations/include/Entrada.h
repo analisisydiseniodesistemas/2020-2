@@ -9,7 +9,7 @@ class Entrada
         Entrada();         /*Constructor por defecto*/
         virtual ~Entrada();/*Destructor*/
         Entrada(std::string nameOfEntry);/*Constructor*/
-        virtual Entrada* operator*(Entrada* other);
+        //virtual Entrada* operator*(Entrada* other);
         virtual Entrada* operator+(Entrada* other);
         //virtual Entrada* Sumar(Entrada* other)=0;
         virtual Entrada* Sumar(Escalar* other)=0;   /*funci\'on virtual pura  */
@@ -19,6 +19,7 @@ class Entrada
         virtual Entrada* Restar(Polinomio* rhsPol)=0;
         virtual Entrada* operator-(Entrada* other);
         virtual std::string to_string()=0;
+        virtual Entrada* operator*(Entrada* other)=0;
     friend std::ostream& operator<<(std::ostream& out,Entrada& rhs);
 
     protected:

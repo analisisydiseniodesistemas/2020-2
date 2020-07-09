@@ -39,11 +39,14 @@ Entrada* PreLamdaI[ROWS][COLS]={
   {new Escalar(0),new Escalar(0),new Escalar(0),new Polinomio(lambda)}
 };
 
-    Matriz A(ROWS,COLS,arr);
-    Matriz B(ROWS,COLS,PreLamdaI);
+    Matriz A(ROWS,COLS,MatofOnes);
+    //Matriz B(ROWS,COLS,PreLamdaI);
+    Matriz F(ROWS,COLS,arr);
 //    Matriz L(ROWS,COLS,PreLamdaI);
     Matriz C=A+B;
     //Matriz D=A-B;
+    Matriz E=A*F;
+    std::cout<<E<<std::endl;
 //    std::cout<<typeid(L).name()<<" L"<<std::endl;
 //    std::cout<<L<<std::endl;
     std::cout<<typeid(A).name()<<" A"<<std::endl;

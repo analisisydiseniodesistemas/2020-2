@@ -142,3 +142,7 @@ std::ostream& operator<<(std::ostream& out,Matriz& rhs)
     return out;
 }/*end operator<<()*/
 
+Matriz Matriz::operator*(Matriz other)
+{
+   //ESCRIBA SU CODIGO AQUI
+}

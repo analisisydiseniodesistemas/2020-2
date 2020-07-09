@@ -17,12 +17,13 @@ Escalar::~Escalar()
     //dtor
 }
 
-Escalar* Escalar::operator*(Escalar* other)
-{
-    Escalar* EPt=new Escalar();
-    EPt->Value=Value*other->Value;
-    return EPt;
-}
+//Entrada* Escalar::operator*(Entrada* other)
+//{
+//    Escalar* EPt=new Escalar();
+//    Escalar* derPt=dynamic_cast<Escalar*>(other);
+//    EPt->Value=Value*derPt->Value;
+//    return EPt;
+//}
 
 //Entrada* Escalar::Sumar(Entrada* other)
 //{
@@ -60,4 +61,13 @@ std::string Escalar::to_string()
     sprintf(cad,"%d",Value);
     std::string str=std::string(cad);
     return str;
+}
+
+Entrada* Escalar::operator*(Entrada* other)
+{
+  Escalar* EPt;
+  Escalar* derPt=dynamic_cast<Escalar*>(other);
+  int r=Value*derPt->Value;
+  EPt=new Escalar(r);
+  return (Entrada*)EPt;
 }

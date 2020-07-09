@@ -99,3 +99,9 @@ Polinomio Polinomio::operator-()
     return R;
 }
 
+/**Stub*/
+Entrada* Polinomio::operator*(Entrada* other)
+{
+  return (Entrada*)other;
+}
+

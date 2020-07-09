@@ -10,7 +10,7 @@ class Escalar : public Entrada
         Escalar();
         Escalar(T val);
         virtual ~Escalar();
-        virtual Escalar* operator*(Escalar* other);
+        virtual Entrada* operator*(Entrada* other);
         //virtual Entrada* Sumar(Entrada* other);
         virtual Entrada* Sumar(Escalar* other);
         virtual Entrada* Sumar(Polinomio* rhsPol);

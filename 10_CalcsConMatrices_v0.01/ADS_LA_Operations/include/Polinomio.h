@@ -22,6 +22,7 @@ class Polinomio : public Entrada
         std::vector<int> get_coef();
         Polinomio& operator=(const Polinomio& other);
         Polinomio operator-();      /*unary substraction operator*/
+        virtual Entrada* operator*(Entrada* other);
     friend std::ostream& operator<<(std::ostream& sal,Polinomio& P);
 
     protected:
