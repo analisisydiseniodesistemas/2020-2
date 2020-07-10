@@ -146,3 +146,15 @@ Matriz Matriz::operator*(Matriz other)
 {
    //ESCRIBA SU CODIGO AQUI
 }
+
+/**EQUIPO 04
+ * El equipo 4 debe implementar una operación que consiste en
+ * transformar un objeto de la clase matriz a un objeto de la
+ * clase Matriz, pero con la diferencia de que el objeto de la
+ * clase Matriz que debe devolver su método, deberá contener
+ * únicamente apuntadores a obtetos de  la clase Polinomio.
+ */
+Matriz Matriz::to_PolinomioPtr()
+{
+  // ESCRIBA SU CODIGO AQUI
+}

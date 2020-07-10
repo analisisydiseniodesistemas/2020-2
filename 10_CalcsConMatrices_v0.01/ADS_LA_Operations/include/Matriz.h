@@ -17,6 +17,7 @@ class Matriz
         Matriz operator+(const Matriz& M1);
         Matriz operator-(const Matriz& M1);
         Matriz operator*(Matriz other);
+        Matriz to_PolinomioPtr();
 
     friend std::ostream& operator<<(std::ostream& out,Matriz& rhs);
 
