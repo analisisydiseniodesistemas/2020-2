@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1591057480 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\vector.cpp
+	<cmath>
+	<iostream>
+	<cassert>
+	"Vector.h"
+
+1591056655 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\vector.h
+
+1593241086 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\testcalcmatrices.cpp
+	<iostream>
+	<typeinfo>
+	"./include/Vector.h"
+	"./include/Entrada.h"
+	"./include/Escalar.h"
+	"./include/Polinomio.h"
+	"./include/Matriz.h"
+
+1595299228 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\matriz.h
+	<iostream>
+	"Entrada.h"
+
+1595299257 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\matriz.cpp
+	<iostream>
+	<vector>
+	<iomanip>
+	<typeinfo>
+	<cmath>
+	<assert.h>
+	"../include/Entrada.h"
+	"../include/Escalar.h"
+	"../include/Polinomio.h"
+	"Matriz.h"
+	"../include/xyPol.h"
+
+1594944757 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\entrada.cpp
+	<iostream>
+	"Entrada.h"
+
+1594944757 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\entrada.h
+	<iostream>
+
+1594950326 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\escalar.cpp
+	<stdio.h>
+	"Escalar.h"
+	"Polinomio.h"
+
+1594883837 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\escalar.h
+	"Entrada.h"
+
+1595110699 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\src\polinomio.cpp
+	<cassert>
+	"Escalar.h"
+	"Polinomio.h"
+
+1594945447 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\polinomio.h
+	<vector>
+	<Entrada.h>
+	"Escalar.h"
+
+1593397378 c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\include\xypol.h
+	"Polinomio.h"
+
+1595355521 source:c:\users\lmc\2020\23_clases_ads_operacionesalgebralineal\ads_la_operations\testmultiplicaciondmatrices.cpp
+	<iostream>
+	<typeinfo>
+	"./include/Vector.h"
+	"./include/Entrada.h"
+	"./include/Escalar.h"
+	"./include/Polinomio.h"
+	"./include/Matriz.h"
+
