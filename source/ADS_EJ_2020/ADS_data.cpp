@@ -16,7 +16,7 @@ using namespace std;
 	VDActividades.push_back(new Actividad(name, duracion ## f ))
 
 /*ends definition of macro NACTIV()*/
-
+#ifdef SEPTIEMBRE_DICIEMBRE_2020
 void
 init_classroom_themes(vector<Actividad*>& VDA)
 {
@@ -26,7 +26,7 @@ init_classroom_themes(vector<Actividad*>& VDA)
   NACT("Ejemplo de una funci\\'on medible {martes,...,lunes}<-->{0,1,...,6}",1.0);
   NACT("Relaciones de equivalencia, s\\imbolo de UML para una clase",1.5);
   NACT("Descripci\\'on de algoritmo",0.5);
-  NACT("Algoritmo de la ra\\'iz cuadrada",0.5);
+  NACT("Algoritmo de la ra\\'iz cuadrada, o bien algoritmo del cartero",0.5);
   NACT("Algoritmo de Euclides",0.5);
   NACT("1.2 Definici\\'on del software",0.5);
   NACT("1.2 Definici\\'on del software",0.25);
@@ -68,19 +68,38 @@ init_classroom_themes(vector<Actividad*>& VDA)
   NACT("4.7 Diagrama de distribuci\\'on", 1.0);
   NACT("4.8 Generaci\\'on de c\\'odigo",3.0);
 }/*end init_classroom_themes()*/
-
+#endif // SEPTIEMBRE_DICIEMBRE_2020
+#ifdef ENERO_2021
+void
+init_classroom_themes(vector<Actividad*>& VDA)
+{
+  NACT("3.5 Herencia simple y m\\'ultiple",3.0);
+  NACT("3.6 Clases abstractas",0.5);
+  NACT("3.7 Polimorfismo",1.0);
+  NACT("U.T. 4 An\\'alisis y dise\\~{n}o con UML", 0.25);
+  NACT("4.1 Introducci\\'on a UML",0.5);
+  NACT("4.2 Herramientas de modelado",0.5);
+  NACT("4.3 Diagramas b\\'asicos en UML",0.5);
+  NACT("4.4 Diagrama de Actividades",1.5);
+  NACT("4.5 Diagramas de clase",1.5);
+  NACT("4.6 Diagramas de secuencia",2.0);
+  NACT("4.7 Diagrama de distribuci\\'on", 1.0);
+  NACT("4.8 Generaci\\'on de c\\'odigo",3.0);
+}/*end init_classroom_themes()*/
+#endif // ENERO_2021
+#ifdef SEPTIEMBRE_DICIEMBRE_2020
 void
 init_laboratory_themes(vector<Actividad*>& VDActividades)
 {
   NACTIV("U.T. I Introducci\\'on a la ingenier\\'ia del software", 0.5);
   NACTIV("1.1 Conceptos fundamentales del software (dato, informaci\\'on)",1.0);
-  NACTIV("Programaci\\'on de la funci\\'on medible \
-{martes,...,lunes}<-->{0,1,...,6}",1.5);
-  NACTIV("P00 Uso de Cygwin:vim, g++, make; uso de github:git clone <repo url>,\
-git add <file name>, git commit -m\"<something>\",push origin master",1.5);
-  NACTIV("P00 REPASO de las actividades realizadas en el laboratorio",1.5);
+  //NACTIV("Programaci\\'on de la funci\\'on medible
+//{martes,...,lunes}<-->{0,1,...,6}",1.5);
+  //NACTIV("P00 Uso de Cygwin:vim, g++, make; uso de github:git clone <repo url>,
+//git add <file name>, git commit -m\"<something>\",push origin master",1.5);
+  //NACTIV("P00 REPASO de las actividades realizadas en el laboratorio",1.5);
   NACTIV("P01 Introducci\\'on a la ingenier\\'ia del software",1.5);
-  NACTIV("P02 Fundamentos de la programaci\\'on en C++",5.0);
+  NACTIV("P02 Fundamentos de la programaci\\'on en C++",3.0);
   NACTIV("P03 Manejo de arreglos unidimensionales y multidimensionales \
 con C++",4.0);
   NACTIV("P04 Uso de m\\'etodos (funciones) en C++", 4.0);
@@ -95,5 +114,17 @@ con C++",4.0);
   NACTIV("P13 Diagramas de distribuci\\'on", 1.0);
   NACTIV("P14 Generaci\\'on de c\\'odigo", 4.5);
 }/*end init_laboratory_themes()*/
-
-
+#endif // SEPTIEMBRE_DICIEMBRE_2020
+#ifdef ENERO_2021
+void
+init_laboratory_themes(vector<Actividad*>& VDActividades)
+{
+  //NACTIV("P08 Clases abstractas y polimorfismo", 4.5);
+  //NACTIV("P09 Diagramas de casos de uso", 2.0);
+  NACTIV("P10 Diagrama de actividades", 1.5);
+  NACTIV("P11 Diagramas de clase", 2.0);
+  NACTIV("P12 Diagramas de secuencia", 3.0);
+  NACTIV("P13 Diagramas de distribuci\\'on", 1.0);
+  NACTIV("P14 Generaci\\'on de c\\'odigo", 4.5);
+}/*end init_laboratory_themes()*/
+#endif // ENERO_2021

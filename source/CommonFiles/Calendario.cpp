@@ -37,10 +37,10 @@ string ARREGLO[][7] = {
 string MONTH[] = { "enero","febrero","marzo","abril","mayo","junio","julio",
 "agosto","septiembre","octubre","noviembre","diciembre" };
 //#else
-static char MES[][32]={"static char MES[][32]",
-"enero","febrero","marzo","abril","mayo","junio","julio",
-"agosto","septiembre","octubre","noviembre","diciembre"
-};
+//static char MES[][32]={"static char MES[][32]",
+//"enero","febrero","marzo","abril","mayo","junio","julio",
+//"agosto","septiembre","octubre","noviembre","diciembre"
+//};
 //#endif /*USING_ARREGLO*/
 /** Thursday 2020.01.30 */
 char Calendario::MES[][32]={"static char MES[][32]",
@@ -58,11 +58,11 @@ void Calendario::print_SetDIntYFecha(string d,string m,SetDIntType* SDI){
     cout<<SDI->intPt[i]<<" de "<<m<<" de 2016"<<endl;
   }
 }
-int Calendario::index_delmes(string month){ 
+int Calendario::index_delmes(string month){
   if(month=="enero")       return 0;
   if(month=="febrero")     return 1;
   if(month=="marzo")       return 2;
-  if(month=="abril")       return 3;    
+  if(month=="abril")       return 3;
   if(month=="mayo")        return 4;
   if(month=="junio")       return 5;
   if(month=="julio")       return 6;
@@ -83,17 +83,17 @@ if(ARREGLO[i][4]==day) return 4;
 if(ARREGLO[i][5]==day) return 5;
 if(ARREGLO[i][6]==day) return 6;
 return -1; /*Para tratar de detectar alg\'un error*/
-}/*end int Calendario::primera_fecha_delmes(string day,int i)*/                                                 
-                      
+}/*end int Calendario::primera_fecha_delmes(string day,int i)*/
+
 SetDIntType* Calendario::obtener_nums_ddia(string d, string m){
              SetDIntType* r=(SetDIntType*)malloc(sizeof(SetDIntType));
-             int i,j; /* index de l mex es el arreglo*/
+             int i,j=0; /* index de l mex es el arreglo*/
              i=index_delmes(m);
              if(i>=0 && i<12){
                      j=primera_fecha_delmes(d,i);
                      }
                      fill_SDIT(i,j,r);
-                     return r; 
+                     return r;
 }
 void Calendario::fill_SDIT(int i,int j,SetDIntType* r){
  int diasdmes;
@@ -116,7 +116,7 @@ void Calendario::fill_SDIT(int i,int j,SetDIntType* r){
      cnt++;
  }
  r->n=cnt-1;
-}                                         
+}
 
 bool Calendario::esta_incluido(string d,vector<string> dias){
   bool ret=false;
@@ -151,9 +151,9 @@ bool Calendario::esta_incluido(Fecha* fPt,vector<Fecha*> FDdnl){
 }
 
 /**
- devuelve la cantidad de fechas entre fi y ff que corresponden a los 
+ devuelve la cantidad de fechas entre fi y ff que corresponden a los
  dias en el vector dias.
- */                                       
+ */
 int Calendario::cant_dFechas(Fecha *fi,Fecha *ff,vector<string> dias){
   int im=fi->m,id=fi->d,cnt=0;
   /*cantidades de dias de los meses (2016)*/
@@ -180,9 +180,10 @@ inic:
  * @param fi:apuntador a fECHA iNICIAL
  * @param ff:apuntador a fECHA fINAL
  * pre: Ambas fechas corresponden al mismo a\~{n}o
- */ 
+ */
 vector<Fecha*> Calendario::get_Fechas(Fecha *fi,Fecha *ff,vector<string> dias){
-  int im=fi->m,id=fi->d,cnt=0; /*iNDICE del mES, iNDICE del dIA*/
+  //int im=fi->m,id=fi->d,cnt=0; /*iNDICE del mES, iNDICE del dIA*/
+  int im=fi->m,id=fi->d; /*iNDICE del mES, iNDICE del dIA*/
   vector<Fecha*> vdf;
   /** Cantidades de dias de los meses de los a\~nos:
    *  (2016--2016 fue bisiesto--,2017,2018,2019)
@@ -229,11 +230,11 @@ inic:
   return vdf;
 }/*end Calendario::get_Fechas()*/
 
-/** Usando el vector de Fechas vdf y el vector de Dias no laborables 
- * dnl, construye un vector de Dias laborables (los dias de clase para 
- * los que se planificar\'an actividades) este vector de Dias laborables. 
- * @param vdf:vector de apuntadores a Fechas de los dias de la semana (VyG. 
- *            "Lunes" y "Viernes" ) que normalmente hay clase desde una 
+/** Usando el vector de Fechas vdf y el vector de Dias no laborables
+ * dnl, construye un vector de Dias laborables (los dias de clase para
+ * los que se planificar\'an actividades) este vector de Dias laborables.
+ * @param vdf:vector de apuntadores a Fechas de los dias de la semana (VyG.
+ *            "Lunes" y "Viernes" ) que normalmente hay clase desde una
  *            Fecha inicial hasta una Fecha final.
  * @param dnl:vector de apuntadores a Dias
  */
@@ -249,7 +250,8 @@ vector<Dia*> Calendario::get_Dias_DC(vector<Fecha*> vdf,vector<Dia*> dnl){
 
 void Calendario::planear(vector<Dia*> DIA,vector<Actividad*> ACT){
   /*i para recorrer los dias y j para recorrer las actividades*/
-  int i=0,j=0;
+  //int i=0,j=0;
+  unsigned int i=0,j=0;
   assert(DIA[i]!=NULL);
   assert(ACT[j]!=NULL);
 #ifndef NDEBUG
@@ -293,7 +295,7 @@ inicio:
 //  int k=0,nda;/*en nda el constructor de Asignacion colocara cuantas Asignaciones van.*/
 //inicio:
 //  if(ACT[j]->TR<=DIA[i]->TD){
-//  	
+//
 //    DIA[i]->TD-=ACT[j]->TR;
 //    DIA[i]->A.push_back(new Asignacion(ACT[j],ACT[j]->TR,Alum[k],&nda));
 //    j++;
@@ -313,7 +315,7 @@ inicio:
 //*/
 
 /** Devuelve el nombre del dia ("lunes","martes","mi\\'ercoles",
- * "jueves","viernes","s\\'abado","domingo") correspondiente a la 
+ * "jueves","viernes","s\\'abado","domingo") correspondiente a la
  * fecha a la que apunta f_Pt.
  * X=D+M+A+(1/4)A+S
  * D:es el n\'umero del d\'ia de la fecha
@@ -321,7 +323,7 @@ inicio:
  * A:es el n\'umero del a\~no (dos d\'igitos)
  * (1/4)A: es la cuarta parte del a\~no (divisi\'on entera)
  * S:es el c\'odigo del siglo
- */ 
+ */
 #ifdef USAR_STRING
 static std::string day_name[]={
 #else
@@ -361,12 +363,13 @@ int Month_Code[]={
 #endif /*LEAPYEAR*/
 };
 //int Century_Code[]={
-/*1600 - 1699:6,*/ 
-/*1700 - 1799:4,*/ 
-/*1800 - 1899:2,*/ 
-/*1900 - 1999:0,*/ 
-/*2000 - 2099:6, se repiten cada 400 a\~nos*/ 
+/*1600 - 1699:6,*/
+/*1700 - 1799:4,*/
+/*1800 - 1899:2,*/
+/*1900 - 1999:0,*/
+/*2000 - 2099:6, se repiten cada 400 a\~nos*/
 //};
+/** En caso de error, devuelve -1*/
 int Century_Code(int year)
 {
   if((year>=1600)&&(year<=1699)){
@@ -378,12 +381,13 @@ int Century_Code(int year)
   }else if((year>=1900)&&(year<=1999)){
     return 0;
   }else if((year>=2000)&&(year<=2099)){
-    return 6;  /*se repiten cada 400 a\~nos*/ 
+    return 6;  /*se repiten cada 400 a\~nos*/
   }
+  return -1;   /** En caso de error, devuelve -1*/
 }/*end Century_Code()*/
 
 #ifdef USAR_STRING
-std::string 
+std::string
 #else
 char *
 #endif
@@ -399,7 +403,7 @@ Calendario::get_day_name(Fecha *f_Pt)
       M,/*c\'odigo del mes*/
  //     A,/*n\'umero del a\~no (dos d\'igitos)*/
       /*(1/4)A, cuarta parte del a\~no (divisi\'on entera)*/
-      Aover4, 
+      Aover4,
       S;/*c\'odigo del siglo*/
 #ifdef LMC_TEST_20200130_2
   f_Pt->a=anio;

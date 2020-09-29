@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PLANNING_ADS_Enero_2021" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PLANNING_ADS_Enero_2021" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PLANNING_ADS_Enero_2021" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions -DCAL_GREGORIANO -DADS_PLANNING -DENERO_2021" />
+			<Add directory="C:/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles" />
+		</Compiler>
+		<Unit filename="ADS_EJ_2020/ADS_data.cpp" />
+		<Unit filename="ADS_EJ_2020/test_Calendario_2021.cpp" />
+		<Unit filename="CommonFiles/Actividad.cpp" />
+		<Unit filename="CommonFiles/Actividad.h" />
+		<Unit filename="CommonFiles/Asignacion.cpp" />
+		<Unit filename="CommonFiles/Asignacion.h" />
+		<Unit filename="CommonFiles/Calendario.cpp" />
+		<Unit filename="CommonFiles/Calendario.h" />
+		<Unit filename="CommonFiles/Dia.cpp" />
+		<Unit filename="CommonFiles/Dia.h" />
+		<Unit filename="CommonFiles/Fecha.h" />
+		<Unit filename="CommonFiles/bubbles.cpp" />
+		<Unit filename="CommonFiles/gettingdate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="CommonFiles/gettingdate.h" />
+		<Unit filename="CommonFiles/util.cpp" />
+		<Unit filename="CommonFiles/util.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

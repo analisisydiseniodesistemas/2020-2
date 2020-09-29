@@ -1,4 +1,4 @@
-#ifdef VISUAL_STUDIO_2017
+#ifdef VISUAL_STUDIO_2017   /** Actually, this does not work on Visual Studio */
 #include "stdafx.h"
 #endif /*VISUAL_STUDIO_2017*/
 #include <iostream>
@@ -52,50 +52,50 @@ static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
 
 #ifdef ADS_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
-  {"Lunes","S106"},
-  {"Martes","C1"},
-  {"Mi\\'ercoles",""},
-  {"Jueves","S106"},
-  {"Viernes","C1"},
-  {"S\\'abado",""},
-  {"Domingo",""}
+  {"Lunes","SALON "},
+  {"Martes","LAB"},
+  {"Mi\\'ercoles","SALON"},
+  {"Jueves","LAB"},
+  {"Viernes","NO HAY CLASE!"},
+  {"S\\'abado","NO HAY CLASE!"},
+  {"Domingo","NO HAY CLASE!"}
 };
 static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
-  {"Lunes","16:00-17:30"},
-  {"Martes","16:00-17:30"},
-  {"Mi\\'ercoles",""},
-  {"Jueves","16:00-17:30"},
-  {"Viernes","16:00-17:30"},
-  {"S\\'abado",""},
-  {"Domingo",""}
+  {"Lunes","10:00-11:30"},
+  {"Martes","10:00-11:30"},
+  {"Mi\\'ercoles","10:00-11:30"},
+  {"Jueves","10:00-11:30"},
+  {"Viernes","NO HAY-HORARIO"},
+  {"S\\'abado","NO HAY-HORARIO"},
+  {"Domingo","NO HAY-HORARIO"}
 };
 #endif /*ADS_PLANNING*/
 #ifdef SOTR_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
-  {"Lunes",""},
+  {"Lunes",", Lunes NO HAY CLASE"},
   {"Martes","C8"},
   {"Mi\\'ercoles","C7"},
-  {"Jueves",""},
+  {"Jueves",", Jueves NO HAY CLASE"},
   {"Viernes","C7"},
-  {"S\\'abado",""},
-  {"Domingo",""}
+  {"S\\'abado",", S\\'abado NO HAY CLASE"},
+  {"Domingo",", Domingo NO HAY CLASE"}
 };
-static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
-  {"Lunes",""},
+static std::string day_horario[7][2]={       /*Wednesday 2020.01.31*/
+  {"Lunes","NO HAY HORARIO"},
   {"Martes","14:30-16:00"},
   {"Mi\\'ercoles","14:30-16:00"},
-  {"Jueves",""},
+  {"Jueves","NO HAY HORARIO"},
   {"Viernes","14:30-16:00"},
-  {"S\\'abado",""},
-  {"Domingo",""}
+  {"S\\'abado","NO HAY HORARIO"},
+  {"Domingo","NO HAY HORARIO"}
 };
 #endif /*SOTR_PLANNING*/
 
-/**2019.10.20 If it is necessary, for backward compatibility, 
+/**2019.10.20 If it is necessary, for backward compatibility,
  * define USING_ARREGLO at command in the make file.
- */ 
+ */
 ostream& operator<<(ostream& out,Dia& D){
-#ifdef USING_ARREGLO   
+#ifdef USING_ARREGLO
   out<<ARREGLO[D.f->m][(D.f->d)%7]<<" "<<D.f->d<<" de "
      <<MONTH[D.f->m]<<" de "<<anio<<endl;
 #else

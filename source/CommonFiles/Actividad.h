@@ -5,9 +5,10 @@ class Dia;
 class Actividad{
 public:
   string nombre;         /*nombre de la actividad*/
+  string ACT_DE_APR;	/*ACTividad DE APRendizaje*/
   float TRT;             /*Tiempo Requerido Total:tiempo en hrs que debe durar la actividad*/
   float TR;              /*Tiempo Requerido*/
-  string ACT_DE_APR;	/*ACTividad DE APRendizaje*/
+
 static float ta;         /*tIEMPO DE aCTIVIDADES*/
   void set_TRT(float TRT);
   vector<Dia*> intervalo;/*Dias durante los cuales se realizara la Actividad*/

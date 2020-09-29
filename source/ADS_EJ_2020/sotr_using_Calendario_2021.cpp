@@ -22,9 +22,9 @@ using namespace std;
 
 int main(int argc,char *argv[])
 {
-  Calendario *Cal2020 = new Calendario(2020);
-  Fecha f1(28,9,2020); /*Lunes 28 de septiembre de 2020 */
-  Fecha f2(24,12,2020); /*Jueves 24 de diciembre de 2020*/
+  Calendario *Cal2021 = new Calendario(2021);
+  Fecha f1(1,1,2021); /*Viernes 1 de enero de 2021*/
+  Fecha f2(23,1,2021); /*S\'abado 23 de enero de 2021*/
 
   /*vector de dias de la semana en que hay clases (te\'{o}ria) de la
    * UA correspondiente*/
@@ -35,31 +35,26 @@ int main(int argc,char *argv[])
   vdd.push_back("Viernes");
   /*vector con las Fechas entre f1 y f2 correspondientes a
    los dias en el vector vdd */
-  vector<Fecha*> VDF = Cal2020->get_Fechas(&f1, &f2, vdd);
+  vector<Fecha*> VDF = Cal2021->get_Fechas(&f1, &f2, vdd);
   /*construir un vector de apuntadores a Dias no laborables*/
   vector<Dia*> vdnl;
-  vdnl.push_back(new Dia(new Fecha(3,2,2020)));   /*Lunes 3 de febrero de 2020*/
-  vdnl.push_back(new Dia(new Fecha(16,3,2020)));   /*Lunes 16 de marzo de 2020*/
-  vdnl.push_back(new Dia(new Fecha(1,5,2020)));  /*Viernes 1 de mayo de 2020*/
-  vdnl.push_back(new Dia(new Fecha(5,5,2020)));  /*Martes 5 de mayo de 2020*/
-  vdnl.push_back(new Dia(new Fecha(2,11,2020)));  /*Lunes 2 de noviembre de 2020*/
-  vdnl.push_back(new Dia(new Fecha(16,11,2020)));  /*Lunes 16 de noviembre de 2020*/
+  vdnl.push_back(new Dia(new Fecha(1,1,2021)));   /*Viernes 1 de enero de 2021*/
 /*Ahora usando el vector de Fechas VDF y el vector de Dias no
  laborables vdnl, construir un vector de Dias laborables (los dias de
  clase para los que se planificar\'an actividades) este vector de Dias
  laborables se obtendr\'a pasando un mensaje al objeto de clase
  Calendario*/
   /*obtener Vector De Dias de Clase,*/
-  vector<Dia*> VDDC = Cal2020->get_Dias_DC(VDF,vdnl);
+  vector<Dia*> VDDC = Cal2021->get_Dias_DC(VDF,vdnl);
   /*Se asigna Tiempo Disponible Total segun el dia de que se trate*/
   for (unsigned int i = 0; i < VDDC.size(); i++) {
-    if(!strcmp(Cal2020->get_day_name(VDDC[i]->f),"Martes")){
+    if(!strcmp(Cal2021->get_day_name(VDDC[i]->f),"Martes")){
       VDDC[i]->set_TDT(1.5);
     }
-    if(!strcmp(Cal2020->get_day_name(VDDC[i]->f),"Mi\\'ercoles")){
+    if(!strcmp(Cal2021->get_day_name(VDDC[i]->f),"Mi\\'ercoles")){
       VDDC[i]->set_TDT(1.5);
     }
-    if(!strcmp(Cal2020->get_day_name(VDDC[i]->f),"Viernes")){
+    if(!strcmp(Cal2021->get_day_name(VDDC[i]->f),"Viernes")){
       VDDC[i]->set_TDT(1.5);
     }
   }
@@ -72,7 +67,7 @@ void init_classroom_themes(vector<Actividad*>&);
 
   /*Por ultimo se hace la planeacion pasando el vector de dias de
   clase y el vector de actividades*/
-  Cal2020->planear(VDDC, VDA);
+  Cal2021->planear(VDDC, VDA);
 
   /*Finalmente se imprime en pantalla los dias a planear con las
   actividades correspondientes por dia de clase entre las fechas
@@ -98,7 +93,7 @@ void fill_vector_v(vector<Dia*>&,vector<Dia*>&,int,int);
     printf("%s <yyyymmdd> YYYYMMDD\n",argv[0]);
   }
 
-  delete Cal2020;  /*Borrar Calendario*/
+  delete Cal2021;  /*Borrar Calendario*/
 
   return 0;
 }//end main()
