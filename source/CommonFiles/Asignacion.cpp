@@ -14,7 +14,7 @@ using std::vector;
 using namespace std;
 #include "Asignacion.h"
 #include "Actividad.h"
-#include "Alumno.h"
+//#include "Alumno.h"
 int Asignacion::NDA=0;
 ostream& operator<<(ostream& out,Asignacion& a){
   out<<"\t"<<a.TA<<"h\t[Tema "<<a.Act->nombre<<"]"<<endl;

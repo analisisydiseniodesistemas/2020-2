@@ -18,7 +18,7 @@ using namespace std;
 #include "Fecha.h"
 #include "Dia.h"
 #include "Asignacion.h"
-#include "Calendario.h"         /*2019.10.20*/
+#include "Calendario.h"/*2019.10.20*/
 extern string ARREGLO[][7];
 extern string MONTH[];
 //extern char MES[][32];
@@ -28,7 +28,42 @@ static char MES[][32]={"static char MES[][32]",
 "enero","febrero","marzo","abril","mayo","junio","julio",
 "agosto","septiembre","octubre","noviembre","diciembre"
 };
-
+//FIXME 2021.02.06
+//static std::string day_place[7][2]={      /*Friday 2020.01.31*/
+//  {"Lunes",""},
+//  //{"Martes","2/o ICE"},
+//  {"Martes",""},
+//  {"Mi\\'ercoles",""},
+//  {"Jueves",""},
+//  //{"Viernes","2/o ICE"},
+//  {"Viernes",""},
+//  {"S\\'abado",""},
+//  {"Domingo",""}
+//};
+////FIXME 2021.02.06
+//static std::string day_horario[7][2]={       /*Friday 2020.01.31*/
+//  {"Lunes",""},
+//  //{"Martes","11:30-13:30"},
+//  {"Martes",""},
+//  {"Mi\\'ercoles",""},
+//  {"Jueves",""},
+//  //{"Viernes","11:30-13:30"},
+//  {"Viernes",""},
+//  {"S\\'abado",""},
+//  {"Domingo",""}
+//};
+/**Tuesday 2021.02.09:
+ * Esto rompe los proyectos PLANNING_PyE_2021_2, y
+ * PLANNING_PROG_ESTRUC_2021_2. FIXED: Los dos
+ * proyectos fueron reparados ya a esta hora:
+ * 2021.02.10.00.17
+ * La forma de repararlos fue agregando en los archivos
+ * []_data.cpp de cada proyecto las declaraciones
+ * apropiadas para los arreglos de std::string:
+ * day_place[][] y day_horario[][].
+ */
+extern std::string day_place[7][2];
+extern std::string day_horario[7][2];
 #ifdef EDO_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
   {"Lunes",""},
@@ -130,7 +165,7 @@ void Dia::set_TDT(float tdt){
   TD=TDT=tdt;
 }
 
-std::string Dia::set_lugar()        /*Friday 2020.01.31*/
+std::string Dia::set_lugar()/*Friday 2020.01.31*/
 {
   Calendario *C=new Calendario(f->a);
   std::string dayName=string(C->get_day_name(f));

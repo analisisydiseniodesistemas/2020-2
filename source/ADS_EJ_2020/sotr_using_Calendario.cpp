@@ -1,7 +1,9 @@
-/** sotr_using_Calendario.cpp - Driver program used to test classes
- *  Calendario, Fecha, Dia, Actividad, Asignacion.
- *  Learning Real Time Operating System
- *  planning for the semester August - December, 2020.
+/** sotr_using_Calendario.cpp - Driver program
+ *  used to test classes Calendario, Fecha,
+ *  Dia, Actividad, Asignacion.
+ *  Learning Unit: Real Time Operating System
+ *  planning for the semester
+ *  August - December, 2020.
  *  (semester will be finished by january, 2021).
  */
 #include <iostream>
@@ -29,7 +31,8 @@ int main(int argc,char *argv[])
   /*vector de dias de la semana en que hay clases (te\'{o}ria) de la
    * UA correspondiente*/
   vector<string> vdd;
-  /*Se indican los d\'ias de la semana que hay clases de SOTR*/
+  /*Se indican los d\'ias de la semana
+    que hay clases de SOTR*/
   vdd.push_back("Martes");
   vdd.push_back("Mi\\'ercoles");
   vdd.push_back("Viernes");
@@ -74,9 +77,9 @@ void init_classroom_themes(vector<Actividad*>&);
   clase y el vector de actividades*/
   Cal2020->planear(VDDC, VDA);
 
-  /*Finalmente se imprime en pantalla los dias a planear con las
-  actividades correspondientes por dia de clase entre las fechas
-  f1 y f2.*/
+  /*Finalmente se imprime en pantalla los dias
+    a planear con las actividades correspondientes
+    por dia de clase entre las fechas f1 y f2.*/
   if(argc==1){
     cout<<"Los dias a planificar en 2021-1 para 3MV11::SOTR son:"<<endl;
     for (unsigned int i = 0;i<VDDC.size();i++) {

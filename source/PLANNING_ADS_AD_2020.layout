@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="ADS_EJ_2020\test_Calendario.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ADS_EJ_2020\ADS_data.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5342" topLine="20" />
+			<Cursor1 position="0" topLine="119" />
 		</Cursor>
 	</File>
-	<File name="CommonFiles\Dia.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ADS_EJ_2020\test_Calendario.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="3660" topLine="121" />
+			<Cursor1 position="5342" topLine="16" />
 		</Cursor>
 	</File>
 	<File name="CommonFiles\Actividad.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -17,19 +17,24 @@
 			<Cursor1 position="333" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="CommonFiles\Calendario.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1845" topLine="315" />
-		</Cursor>
-	</File>
 	<File name="CommonFiles\Asignacion.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="7" />
 		</Cursor>
 	</File>
-	<File name="CommonFiles\util.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CommonFiles\util.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="775" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="CommonFiles\Calendario.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1845" topLine="315" />
+		</Cursor>
+	</File>
+	<File name="CommonFiles\Dia.cpp" open="1" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3660" topLine="121" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
