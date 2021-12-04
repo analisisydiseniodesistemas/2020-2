@@ -16,7 +16,9 @@ using namespace std;
 #include "../CommonFiles/Dia.h"
 #include "../CommonFiles/Actividad.h"
 #include "../CommonFiles/Asignacion.h"
+#if 0 //LMC 2021.08.30
 #include "../CommonFiles/AdA.h"
+#endif // 0
 #include <util.h>
 
 

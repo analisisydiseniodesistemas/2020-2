@@ -46,32 +46,40 @@ init_classroom_themes(vector<Actividad*>& VDA)
  NACT("1.2 Uso de variables y constantes (AD T)",0.5);
  NACT("1.2 Uso de variables y constantes (AA T)",0.5);
  NACT("1.3 Creaci\\'on de c\\'odigo fuente, objeto \
-y ejecutable (AD P1)",1.0);
+y ejecutable (AD P1 AMBIENTE DE PROGRAMACION)",1.0);
  NACT("1.3 Creaci\\'on de c\\'odigo fuente, objeto \
 y ejecutable (AA T)",0.5);
  NACT("1.4 Operadores (AA T)",1.0);
- NACT("1.4 Operadores (AD P1)",1.0);
+ NACT("1.4 Operadores (AD P1 AMBIENTE DE PROGRAMACION)",1.0);
  NACT("1.5 Expresiones simples y complejas (AA T)",1.0);
- NACT("1.5 Expresiones simples y complejas (AD P1)",1.0);
+ NACT("1.5 Expresiones simples y complejas \
+(AD P1 AMBIENTE DE PROGRAMACION)",1.0);
 
  NACT("U.T. II ESTRUCTURAS DE CONTROL Y APLICACIONES \
 CON ARREGLOS",0.25);
  NACT("2.1 Diagramas de flujo (AD T)",0.25);
- NACT("2.1 Diagramas de flujo (AD P2)",3.0);
+ NACT("2.1 Diagramas de flujo (AD P2 \
+MANEJO DE SENTENCIAS DE CONTROL)",3.0);
  NACT("2.1 Diagramas de flujo (AA T)",0.5);
- NACT("2.1 Diagramas de flujo (AA P2)",0.5);
+ NACT("2.1 Diagramas de flujo (AA P2 \
+MANEJO DE SENTENCIAS DE CONTROL)",0.5);
  NACT("2.2 Sentencias de control (AD T)",1.0);
  NACT("2.2 Sentencias de control (AA T)",1.0);
- NACT("2.2 Sentencias de control (AD P2)",4.0);
- NACT("2.2 Sentencias de control (AA P2)",0.5);
+ NACT("2.2 Sentencias de control (AD P2 \
+MANEJO DE SENTENCIAS DE CONTROL)",4.0);
+ NACT("2.2 Sentencias de control (AA P2 \
+MANEJO DE SENTENCIAS DE CONTROL)",0.5);
  NACT("2.3 Tipos de arreglos (AD T)",1.0);
  NACT("2.3 Tipos de arreglos (AA T)",1.0);
- NACT("2.3 Tipos de arreglos (AD P3)",4.5);
+ NACT("2.3 Tipos de arreglos (AD P3 \
+MANEJOS DE ARREGLOS UNIDIMENSIONALES Y BIDIMENSIONALES)",4.5);
  NACT("2.4 Aplicaciones con arreglos (AD T)",1.0);
  NACT("2.4 Aplicaciones con arreglos (AA T)",1.0);
  //NACT("2.4 Aplicaciones con arreglos (AD P3)",4.5);
- NACT("2.4 Aplicaciones con arreglos (AD P3)",3.0);
- NACT("2.4 Aplicaciones con arreglos (AA P3)",0.5);
+ NACT("2.4 Aplicaciones con arreglos (AD P3 \
+MANEJOS DE ARREGLOS UNIDIMENSIONALES Y BIDIMENSIONALES)",3.0);
+ NACT("2.4 Aplicaciones con arreglos (AA P3 \
+MANEJOS DE ARREGLOS UNIDIMENSIONALES Y BIDIMENSIONALES)",0.5);
 // NACT("U.T. II ESTRUCTURAS DE CONTROL Y APLICACIONES
 //CON ARREGLOS",0.0);
 
@@ -79,35 +87,38 @@ CON ARREGLOS",0.25);
  NACT("3.1 Funciones (AD T)",0.5);
  NACT("3.1 Funciones (AA T)",2.0);
  //NACT("3.1 Funciones (AD P4)",4.0);
- NACT("3.1 Funciones (AD P4)",3.0);
- NACT("3.1 Funciones (AA P4)",3.0);
+ NACT("3.1 Funciones (AD P4 USO DE FUNCIONES)",3.0);
+ NACT("3.1 Funciones (AA P4 USO DE FUNCIONES)",3.0);
  NACT("3.2 Cadenas (AD T)",1.5);
  NACT("3.2 Cadenas (AA T)",1.5);
- NACT("3.2 Cadenas (AD P5)",4.5);
- NACT("3.2 Cadenas (AA P5)",1.0);
+ NACT("3.2 Cadenas (AD P5 MANEJO DE CADENAS)",4.5);
+ NACT("3.2 Cadenas (AA P5 MANEJO DE CADENAS)",1.0);
  //NACT("U.T. III MANEJO DE FUNC0IONES Y CADENAS",0.0);
 
- //NACT("U.T. IV MANEJOS DE APUNTADORES Y ESTRUCTURAS",0.0);
- NACT("4.1 Apuntadores y variables (AD T)",1.5);
+ NACT("U.T. IV MANEJOS DE APUNTADORES Y ESTRUCTURAS",0.25);
+ NACT("4.1 Apuntadores y variables (AD T)",1.25);
  NACT("4.1 Apuntadores y variables (AA T)",1.5);
  //NACT("4.1 Apuntadores y variables (AD P6)",5.0);
- NACT("4.1 Apuntadores y variables (AD P6)",4.0);
- NACT("4.1 Apuntadores y variables (AA P6)",1.5);
+ NACT("4.1 Apuntadores y variables (AD P6 \
+USO DE APUNTADORES)",4.0);
+ NACT("4.1 Apuntadores y variables (AA P6 \
+USO DE APUNTADORES)",1.5);
  NACT("4.2 Estructuras (AD T)",1.5);
  NACT("4.2 Estructuras (AA T)",1.5);
  //NACT("4.2 Estructuras (AD P7)",5.0);
- NACT("4.2 Estructuras (AD P7)",4.0);
- NACT("4.2 Estructuras (AA P7)",2.0);
+ NACT("4.2 Estructuras (AD P7 MANEJO DE ESTRUCTURAS)",4.0);
+ NACT("4.2 Estructuras (AA P7 MANEJO DE ESTRUCTURAS)",2.0);
  //NACT("U.T. IV MANEJOS DE APUNTADORES Y ESTRUCTURAS",0.0);
  //NACT("U.T. IV MANEJOS DE APUNTADORES Y ESTRUCTURAS",19.5);
 
- //NACT("U.T. V MANEJO DE ARCHIVOS Y PUERTOS",11.0);
- NACT("5.1 Puertos (serie y paralelo) (AD T)",0.5);
+ NACT("U.T. V MANEJO DE ARCHIVOS Y PUERTOS",0.25);
+ NACT("5.1 Puertos (serie y paralelo) (AD T)",0.25);
  NACT("5.1 Puertos (serie y paralelo) (AA T)",1.0);
- NACT("5.1 Puertos (serie y paralelo) (AD P8)",3.0);
+ NACT("5.1 Puertos (serie y paralelo) (AD P8 \
+CONTROL DE PUERTOS)",3.0);
  NACT("5.2 Archivos (AD T)",1.0);
  NACT("5.2 Archivos (AA T)",1.0);
- NACT("5.2 Archivos (AD P9)",4.5);
+ NACT("5.2 Archivos (AD P9 MANEJO DE ARCHIVOS)",4.5);
  //NACT("U.T. MANEJO DE ARCHIVOS Y PUERTOS",11.0);
 }
 

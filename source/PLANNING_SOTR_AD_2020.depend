@@ -7,7 +7,7 @@
 
 1596069614 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.h
 
-1596081846 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\ads_ej_2020\sotr_using_calendario.cpp
+1630377247 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\ads_ej_2020\sotr_using_calendario.cpp
 	<iostream>
 	<vector>
 	<stdio.h>
@@ -21,11 +21,11 @@
 	"../CommonFiles/AdA.h"
 	<util.h>
 
-1580412851 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.h
+1612762667 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.h
 
-1580838456 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\fecha.h
+1580842056 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\fecha.h
 
-1581445254 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.h
+1581448854 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.h
 	<iostream>
 	<ostream>
 	<vector>
@@ -35,25 +35,24 @@
 1534801267 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\ada.h
 	<string>
 
-1580838253 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.h
+1580841853 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.h
 
-1583650062 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.cpp
+1583653662 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.cpp
 	<iostream>
 	<vector>
 	"Actividad.h"
 
-1571060610 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
+1612839111 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
 	"stdafx.h"
 	<ostream>
 	<vector>
 	<string>
 	"Asignacion.h"
 	"Actividad.h"
-	"Alumno.h"
 
 1489807008 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\alumno.h
 
-1580325446 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\bubbles.cpp
+1580329046 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\bubbles.cpp
 	<vector>
 	<string>
 	<Calendario.h>
@@ -73,7 +72,7 @@
 	"Actividad.h"
 	"Asignacion.h"
 
-1596081456 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.cpp
+1630504239 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.cpp
 	"stdafx.h"
 	<iostream>
 	<ostream>
@@ -89,11 +88,15 @@
 1571418026 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\gettingdate.c
 	<time.h>
 
-1596069337 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.cpp
+1612816161 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.cpp
 	<iostream>
 	<vector>
 	<assert.h>
+	<string.h>
 	"../CommonFiles/Calendario.h"
 	"../CommonFiles/Fecha.h"
 	"../CommonFiles/Dia.h"
+	<DiaTiempo.h>
+
+1612763134 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\diatiempo.h
 

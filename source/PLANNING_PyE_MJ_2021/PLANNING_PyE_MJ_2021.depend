@@ -4,18 +4,17 @@
 	<vector>
 	"Actividad.h"
 
-1596069614 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.h
+1596066014 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.h
 
-1571060610 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
+1612835511 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
 	"stdafx.h"
 	<ostream>
 	<vector>
 	<string>
 	"Asignacion.h"
 	"Actividad.h"
-	"Alumno.h"
 
-1571060532 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.h
+1571056932 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.h
 
 1489807008 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\alumno.h
 
@@ -35,7 +34,7 @@
 	<ostream>
 	<vector>
 
-1596069998 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.cpp
+1596066398 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.cpp
 	"stdafx.h"
 	<iostream>
 	<vector>
@@ -48,7 +47,7 @@
 	"Actividad.h"
 	"Asignacion.h"
 
-1571418026 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\gettingdate.c
+1571414426 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\gettingdate.c
 	<time.h>
 
 1612812561 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.cpp
@@ -61,7 +60,7 @@
 	"../CommonFiles/Dia.h"
 	<DiaTiempo.h>
 
-1612828061 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\mainplanning_pye.cpp
+1615902916 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\mainplanning_pye.cpp
 	<iostream>
 	<vector>
 	<stdio.h>
@@ -80,7 +79,7 @@
 
 1580838253 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.h
 
-1612662696 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.cpp
+1612938015 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.cpp
 	"stdafx.h"
 	<iostream>
 	<ostream>
@@ -93,7 +92,7 @@
 	"Asignacion.h"
 	"Calendario.h"
 
-1612727386 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\pye_data.cpp
+1614782616 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\pye_data.cpp
 	<iostream>
 	<vector>
 	<assert.h>

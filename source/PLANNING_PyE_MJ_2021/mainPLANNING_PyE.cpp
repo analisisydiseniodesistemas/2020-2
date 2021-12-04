@@ -39,8 +39,8 @@ int main(int argc,char *argv[])
  /*Se indican los d\'ias de la semana que hay clases
    de la UA y las horas de clase en ese d\'ia*/
  vector<DiaTiempo> dia_tiempo;
- dia_tiempo.push_back(DiaTiempo("Lunes",2.0));
- dia_tiempo.push_back(DiaTiempo("Martes",2.0));
+ dia_tiempo.push_back(DiaTiempo("Mi\\'ercoles",2.0));
+ dia_tiempo.push_back(DiaTiempo("Viernes",2.0));
  /*construir un vector de apuntadores a Dias no laborables*/
  vector<Dia*> vdnl;
  vdnl.push_back(new Dia(new Fecha(15,3,2021)));/*15 marzo 2021*/
@@ -67,6 +67,7 @@ void manage_IO(int argc,char *argv[],vector<Dia*> VDDC){
  if(argc==1){
    cout<<"Los dias a planificar son:"<<endl;
    for (unsigned int i = 0;i<VDDC.size();i++) {
+     cout<<(i+1)<<"\n";
      cout<<*VDDC[i]<<endl;
    }
  }else if(argc==3){

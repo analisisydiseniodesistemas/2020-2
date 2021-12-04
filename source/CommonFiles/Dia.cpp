@@ -61,9 +61,38 @@ static char MES[][32]={"static char MES[][32]",
  * []_data.cpp de cada proyecto las declaraciones
  * apropiadas para los arreglos de std::string:
  * day_place[][] y day_horario[][].
+ * Wednesday 2021.09.01
+ * Por otra parte, los proyectos PLANNING_SOTR_AD_2020
+ * y PLANNING_SOTR_Enero_2021, por el momento est\'an
+ * rotos. Una forma de repararlos ser\'ia agregar
+ * directivas
+ * #ifndef EDO_PLANNING
+ * #ifndef ADS_PLANNING
+ * #ifndef SOTR_PLANNING
+ *
+ * #endif //SOTR_PLANNING
+ * #endif //ADS_PLANNING
+ * #endif //EDO_PLANNING
+ * alrededor de las dos declaraciones extern de
+ * day_place[7][2] y day_horario[7][2]
+ *
+ * Seg\'un parece, romp\'i esos proyectos cuando
+ * agregu\'e el proyecto PLANNING_SOTR_2021_2.cbp
+ * --que fue cuando agregu\'e las declaraciones
+ * extern de day_place[7][2] y day_horario[7][2]--.
+ * FIXED: Los proyectos PLANNING_SOTR_AD_2020
+ * y PLANNING_SOTR_Enero_2021 han sido corregidos
+ * agregando los #ifdef y #endif.
  */
+#ifndef EDO_PLANNING
+#ifndef ADS_PLANNING
+#ifndef SOTR_PLANNING
 extern std::string day_place[7][2];
 extern std::string day_horario[7][2];
+#endif //SOTR_PLANNING
+#endif //ADS_PLANNING
+#endif //EDO_PLANNING
+
 #ifdef EDO_PLANNING
 static std::string day_place[7][2]={      /*Friday 2020.01.31*/
   {"Lunes",""},

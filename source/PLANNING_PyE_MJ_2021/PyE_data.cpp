@@ -30,9 +30,9 @@ std::string day_place[7][2]={/*Tuesday 2021.02.09*/
 std::string day_horario[7][2]={/*Tuesday 2021.02.09*/
   {"Lunes",""},
   {"Martes",""},
-  {"Mi\\'ercoles",""},
+  {"Mi\\'ercoles","07:30-09:30"},
   {"Jueves",""},
-  {"Viernes",""},
+  {"Viernes","09:30-11:30"},
   {"S\\'abado",""},
   {"Domingo",""}
 };
@@ -95,7 +95,7 @@ ALEATORIA",1.5);
   NACT("VI.B PRESENTACION DE DATOS",2.0);
   NACT("VI.C ESTADISTICOS MUESTRALES DE \
 TENDENCIA CENTRAL",3.0);
-  NACT("VI.C ESTADISTICOS MUESTRALES DE \
+  NACT("VI.D ESTADISTICOS MUESTRALES DE \
 DISPERSION",3.0);
   //NACT("U.T. VII ESTIMACION ESTADISTICA Y
   //DISTRIBUCIONES DE MUESTREO",3.0);
