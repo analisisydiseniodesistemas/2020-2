@@ -2,14 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Release" />
-	<File name="CommonFiles\Dia.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="CommonFiles/Dia.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="2612" topLine="81" />
 		</Cursor>
 	</File>
-	<File name="ADS_EJ_2020\sotr_using_Calendario_2021.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="ADS_EJ_2020/sotr_using_Calendario_2021.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="666" topLine="16" />
+			<Cursor1 position="667" topLine="6" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

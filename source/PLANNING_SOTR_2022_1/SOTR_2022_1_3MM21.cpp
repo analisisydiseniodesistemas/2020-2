@@ -6,7 +6,9 @@ using namespace std;
 #include <string.h>  /*strcmp()*/
 #define NDEBUG
 #include <assert.h>
+#ifdef USANDO_WINDOWS
 #include <windows.h>
+#endif // USANDO_WINDOWS
 #include "../CommonFiles/Calendario.h"
 #include "../CommonFiles/Fecha.h"
 #include "../CommonFiles/Dia.h"
@@ -64,6 +66,7 @@ int main(int argc,char *argv[])
    correspondientes por dia de clase entre las fechas
    f1 y f2.*/
  manage_IO(argc,argv,VDDC);
+#ifdef USANDO_WINDOWS
  SYSTEM_INFO si;
  //GetNativeSystemInfo(&si);
  GetSystemInfo(&si);
@@ -72,7 +75,8 @@ int main(int argc,char *argv[])
  printf("Processor Mask: 0x%p\n", (PVOID)si.dwActiveProcessorMask);
  printf("Minimum process address: 0x%p\n", si.lpMinimumApplicationAddress);
  printf("Maximum process address: 0x%p\n", si.lpMaximumApplicationAddress);
-
+#endif // USANDO_WINDOWS
+ return 0;
 }/*end main()*/
 
 

@@ -5,6 +5,8 @@
 	<assert.h>
 	"../CommonFiles/Actividad.h"
 
+1596168789 Files/Actividad.h"
+
 1596069614 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.h
 
 1630377419 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\ads_ej_2020\sotr_using_calendario_2021.cpp
@@ -20,6 +22,8 @@
 	"../CommonFiles/Asignacion.h"
 	"../CommonFiles/AdA.h"
 	<util.h>
+
+1571418026 
 
 1612762667 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.h
 
@@ -38,6 +42,8 @@
 	<iostream>
 	<vector>
 	"Actividad.h"
+
+1612839111 .h"
 
 1612839111 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
 	"stdafx.h"
@@ -67,6 +73,8 @@
 	"Actividad.h"
 	"Asignacion.h"
 
+1596069998 n.h"
+
 1571418026 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\gettingdate.c
 	<time.h>
 
@@ -79,6 +87,8 @@
 	"../CommonFiles/Fecha.h"
 	"../CommonFiles/Dia.h"
 	<DiaTiempo.h>
+
+1612816161 .h>
 
 1612763134 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\diatiempo.h
 
@@ -94,4 +104,85 @@
 	"Dia.h"
 	"Asignacion.h"
 	"Calendario.h"
+
+1630504239 o.h"
+
+1596168789 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/ADS_EJ_2020/SOTR_data.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	"../CommonFiles/Actividad.h"
+
+1596069614 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Actividad.h
+
+1630377419 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/ADS_EJ_2020/sotr_using_Calendario_2021.cpp
+	<iostream>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"../CommonFiles/Calendario.h"
+	"../CommonFiles/Fecha.h"
+	"../CommonFiles/Dia.h"
+	"../CommonFiles/Actividad.h"
+	"../CommonFiles/Asignacion.h"
+	"../CommonFiles/AdA.h"
+	<util.h>
+
+1612759067 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Calendario.h
+
+1580838456 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Fecha.h
+
+1581445254 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Dia.h
+	<iostream>
+	<ostream>
+	<vector>
+
+1571060532 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Asignacion.h
+
+1583650062 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Actividad.cpp
+	<iostream>
+	<vector>
+	"Actividad.h"
+
+1612835511 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Asignacion.cpp
+	"stdafx.h"
+	<ostream>
+	<vector>
+	<string>
+	"Asignacion.h"
+	"Actividad.h"
+
+1580325446 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/bubbles.cpp
+	<vector>
+	<string>
+	<Calendario.h>
+	<Fecha.h>
+	<Dia.h>
+
+1596069998 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Calendario.cpp
+	"stdafx.h"
+	<iostream>
+	<vector>
+	<string>
+	<stdlib.h>
+	<assert.h>
+	"Calendario.h"
+	"Fecha.h"
+	"Dia.h"
+	"Actividad.h"
+	"Asignacion.h"
+
+1571418026 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/gettingdate.c
+	<time.h>
+
+1612812561 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/util.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	<string.h>
+	"../CommonFiles/Calendario.h"
+	"../CommonFiles/Fecha.h"
+	"../CommonFiles/Dia.h"
+	<DiaTiempo.h>
 
