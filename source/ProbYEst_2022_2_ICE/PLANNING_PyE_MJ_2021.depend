@@ -1,0 +1,194 @@
+# depslib dependency file v1.0
+1583650062 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.cpp
+	<iostream>
+	<vector>
+	"Actividad.h"
+
+1612835511 .h"
+
+1596066014 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\actividad.h
+
+1612835511 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.cpp
+	"stdafx.h"
+	<ostream>
+	<vector>
+	<string>
+	"Asignacion.h"
+	"Actividad.h"
+
+1571056932 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\asignacion.h
+
+1489807008 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\alumno.h
+
+1580325446 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\bubbles.cpp
+	<vector>
+	<string>
+	<Calendario.h>
+	<Fecha.h>
+	<Dia.h>
+
+1534801267 
+
+1612759067 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.h
+
+1580838456 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\fecha.h
+
+1581445254 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.h
+	<iostream>
+	<ostream>
+	<vector>
+
+1596066398 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\calendario.cpp
+	"stdafx.h"
+	<iostream>
+	<vector>
+	<string>
+	<stdlib.h>
+	<assert.h>
+	"Calendario.h"
+	"Fecha.h"
+	"Dia.h"
+	"Actividad.h"
+	"Asignacion.h"
+
+1596066398 n.h"
+
+1571414426 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\gettingdate.c
+	<time.h>
+
+1612812561 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	<string.h>
+	"../CommonFiles/Calendario.h"
+	"../CommonFiles/Fecha.h"
+	"../CommonFiles/Dia.h"
+	<DiaTiempo.h>
+
+1615902916 .h>
+
+1615902916 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\mainplanning_pye.cpp
+	<iostream>
+	<vector>
+	<stdio.h>
+	<string.h>
+	<assert.h>
+	"../CommonFiles/Calendario.h"
+	"../CommonFiles/Fecha.h"
+	"../CommonFiles/Dia.h"
+	"../CommonFiles/Actividad.h"
+	"../CommonFiles/Asignacion.h"
+	<util.h>
+	<DiaTiempo.h>
+
+1534801267 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\ada.h
+	<string>
+
+1580838253 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\util.h
+
+1612938015 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\dia.cpp
+	"stdafx.h"
+	<iostream>
+	<ostream>
+	<vector>
+	<string>
+	<assert.h>
+	"../CommonFiles/Calendario.h"
+	"Fecha.h"
+	"Dia.h"
+	"Asignacion.h"
+	"Calendario.h"
+
+1612938015 o.h"
+
+1614782616 source:c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\planning_pye_mj_2021\pye_data.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	"../CommonFiles/Actividad.h"
+
+1614782616 Files/Actividad.h"
+
+1612759534 c:\users\lmc\2020\repos_2020\ads-2020-2\repo\2020-2\source\commonfiles\diatiempo.h
+
+1583650062 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Actividad.cpp
+	<iostream>
+	<vector>
+	"Actividad.h"
+
+1596069614 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Actividad.h
+
+1612835511 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Asignacion.cpp
+	"stdafx.h"
+	<ostream>
+	<vector>
+	<string>
+	"Asignacion.h"
+	"Actividad.h"
+
+1571060532 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Asignacion.h
+
+1596069998 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Calendario.cpp
+	"stdafx.h"
+	<iostream>
+	<vector>
+	<string>
+	<stdlib.h>
+	<assert.h>
+	"Calendario.h"
+	"Fecha.h"
+	"Dia.h"
+	"Actividad.h"
+	"Asignacion.h"
+
+1612759067 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Calendario.h
+
+1580838456 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Fecha.h
+
+1581445254 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Dia.h
+	<iostream>
+	<ostream>
+	<vector>
+
+1580325446 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/bubbles.cpp
+	<vector>
+	<string>
+	<Calendario.h>
+	<Fecha.h>
+	<Dia.h>
+
+1643728822 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/Dia.cpp
+	"stdafx.h"
+	<iostream>
+	<ostream>
+	<vector>
+	<string>
+	<assert.h>
+	"../CommonFiles/Calendario.h"
+	"Fecha.h"
+	"Dia.h"
+	"Asignacion.h"
+	"Calendario.h"
+
+1571418026 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/gettingdate.c
+	<time.h>
+
+1612812561 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/util.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	<string.h>
+	"../CommonFiles/Calendario.h"
+	"../CommonFiles/Fecha.h"
+	"../CommonFiles/Dia.h"
+	<DiaTiempo.h>
+
+1612759534 /mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/CommonFiles/DiaTiempo.h
+
+1644330838 source:/mnt/sda3/Users/LMC/2020/REPOS_2020/ADS-2020-2/REPO/2020-2/source/ProbYEst_2022_2_ICE/PyE_data.cpp
+	<iostream>
+	<vector>
+	<assert.h>
+	"../CommonFiles/Actividad.h"
+

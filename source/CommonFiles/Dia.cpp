@@ -163,6 +163,7 @@ ostream& operator<<(ostream& out,Dia& D){
   out<<ARREGLO[D.f->m][(D.f->d)%7]<<" "<<D.f->d<<" de "
      <<MONTH[D.f->m]<<" de "<<anio<<endl;
 #else
+//#error ESTO ES UNA PRUEBA PARA VER SI YA NO SE ESTA USANDO ARREGLO!!!
   Calendario *Cal_Greg=new Calendario();
 #ifndef NDEBUG
 //  cout<<__FILE__<<": "<<__LINE__+1<<":";

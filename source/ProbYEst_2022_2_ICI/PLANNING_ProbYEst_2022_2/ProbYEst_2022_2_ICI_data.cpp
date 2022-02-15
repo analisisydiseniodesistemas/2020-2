@@ -19,20 +19,20 @@ using namespace std;
 //
 ///*ends definition of macro NACTIV()*/
 std::string day_place[7][2]={/*Tuesday 2021.02.09*/
-  {"Lunes",""},
-  {"Martes","Aula virtual"},
-  {"Mi\\'ercoles","Aula virtual"},
+  {"Lunes","Aula presencial"},
+  {"Martes",""},
+  {"Mi\\'ercoles","Aula presencial"},
   {"Jueves",""},
-  {"Viernes","Aula virtual"},
+  {"Viernes",""},
   {"S\\'abado",""},
   {"Domingo",""}
 };
-std::string day_horario[7][2]={/**Tuesday 2021.09.02*/
-  {"Lunes",""},
-  {"Martes","14:30-16:00"},
-  {"Mi\\'ercoles","14:30-16:00"},
+std::string day_horario[7][2]={
+  {"Lunes","07:30-09:30"},
+  {"Martes",""},
+  {"Mi\\'ercoles","07:30-09:30"},
   {"Jueves",""},
-  {"Viernes","14:30-16:00"},
+  {"Viernes",""},
   {"S\\'abado",""},
   {"Domingo",""}
 };
@@ -40,161 +40,62 @@ std::string day_horario[7][2]={/**Tuesday 2021.09.02*/
 void
 init_classroom_themes(vector<Actividad*>& VDA)
 {
- NACT("U.T. I INTRODUCCION A LOS SISTEMAS OPERATIVOS \
-EN TIEMPO REAL",0.5);
- NACT("1.1 Definici\\'on de un sistema operativo en tiempo \
-real (AD P1 INSTALACION DE UN SISTEMA OPERATIVO EN \
-TIEMPO REAL)",1.0);
- NACT("1.1 Definici\\'on de un sistema operativo en tiempo \
-real (AA P1 INSTALACION DE UN SISTEMA OPERATIVO EN \
-TIEMPO REAL)",2.0);
- NACT("1.2 Diferencias entre un kernel de tiempo real y un \
-kernel normal (AD P1 INSTALACION DE UN SISTEMA OPERATIVO EN \
-TIEMPO REAL)",1.5);
-//#ifdef ORIG
- NACT("1.2 Diferencias entre un kernel de tiempo real y un \
-kernel normal (AA P1 INSTALACION DE UN SISTEMA OPERATIVO EN \
-TIEMPO REAL)",2.0);
-//#endif // ORIG
- NACT("1.3 Conociendo sistemas operativos en tiempo real \
-(AD P1 INSTALACION DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",1.5);
-#ifdef ORIG
- NACT("1.3 Conociendo sistemas operativos en tiempo real \
-(AA P1 INSTALACION DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",0.5);
-#endif // ORIG
- NACT("1.4 Caracter\\'isticas en la instalaci\\'on de un \
-sistema operativo en tiempo real (AD P2 CONOCIENDO EL \
-ENTORNO DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",2.5);
- NACT("1.4 Caracter\\'isticas en la instalaci\\'on de un \
-sistema operativo en tiempo real (AA P2 CONOCIENDO EL \
-ENTORNO DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",3.5);
-#ifdef NUEVO
- NACT("TRABAJO DE INVESTIGACION SOBRE SISTEMAS OPERATIVOS \
-DE TIEMPO REAL",2.0);
-#endif // NUEVO
- NACT("1.4 Caracter\\'isticas en la instalaci\\'on de un \
-sistema operativo en tiempo real (AA P2 CONOCIENDO EL \
-ENTORNO DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",1.5);
-#ifdef NUEVO
- NACT("CUADRO/TABLA COMPARATIVA DE SISTEMAS OPERATIVOS CONVENCIONALES \
-Y DE TIEMPO REAL",2.0);
-#endif // NUEVO
- NACT("1.4 Caracter\\'isticas en la instalaci\\'on de un \
-sistema operativo en tiempo real (AA P2 CONOCIENDO EL \
-ENTORNO DE UN SISTEMA OPERATIVO EN TIEMPO REAL)",1.5);
-#ifdef NUEVO
- NACT("ALBUM DE ARCHIVOS DE CODIGO FUENTE EN LENGUAJE ENSAMBLADOR \
-Y ANSI C",2.0);
-#endif // NUEVO
-#ifdef NUEVO
- NACT("REPORTES DE LAS PRACTICAS 1 y 2",2.0);
-#endif // NUEVO
+ NACT("U.T. I TEORIA DE PROBABILIDAD",0.5);
+ NACT("I.A Probabilidad",0.5);
+ NACT("I.B Eventos",1.0);
+ NACT("I.C Combinaciones de Eventos ",2.0);
+ NACT("I.D Probabilidad Condicional",2.0);
+ NACT("I.E Teorema de Bayes",1.0);
+ NACT("I.F T\\'ecnicas de Conteo",1.0);
 
- NACT("U.T. II PROGRAMACION CONCURRENTE",0.25);
- NACT("2.1 Concepto de proceso (AD P3 CREACION DE PROCESOS)",0.5);
- NACT("2.1 Concepto de proceso (AA P3 CREACION DE PROCESOS)",1.5);
- NACT("2.2 Concepto de concurrencia (AD P3 CREACION DE PROCESOS)",0.75);
- NACT("2.2 Concepto de concurrencia (AA P3 CREACION DE PROCESOS)",1.5);
-#ifdef NUEVO
- NACT("TRABAJO DE INVESTIGACION SOBRE LOS PROCESOS/TAREAS DE LOS \
-SISTEMAS OPERATIVOS",0.5);
-#endif // NUEVO
- NACT("2.3 Exclusi\\'on mutua (AD P4 EXCLUSION MUTUA)",2.0);
- NACT("2.3 Exclusi\\'on mutua (AA P4 EXCLUSION MUTUA)",4.0);
-#ifdef NUEVO
- NACT("CUADRO/TABLA COMPARATIVA DE FUNCIONES DE BIBLIOTECA SINCRONAS \
-Y ASINCRONAS DEL SISTEMA OPERATIVO MARTE OS",0.5);
-#endif // NUEVO
- NACT("2.3 Exclusi\\'on mutua (AD P5 ALGORITMO DE DEKKER Y PETERSON)",1.5);
- NACT("2.3 Exclusi\\'on mutua (AA P5 ALGORITMO DE DEKKER Y PETERSON)",2.5);
-#ifdef NUEVO
- NACT("ALBUM DE ARCHIVOS DE CODIGO FUENTE EN LENGUAJE ENSAMBLADOR \
-Y ANSI C",0.5);
-#endif // NUEVO
- NACT("2.4 Sem\\'aforos (AD P6 UTILIZANDO SEMAFOROS PARA SINCRONIZAR \
-PROCESOS)",1.5);
- NACT("2.4 Sem\\'aforos (AA P6 UTILIZANDO SEMAFOROS PARA SINCRONIZAR \
-PROCESOS)",1.5);
- NACT("2.5 Mensajes (AD P7 UTILIZANDO MENSAJES PARA SINCRONIZAR \
-PROCESOS)",1.5);
- NACT("2.5 Mensajes (AA P7 UTILIZANDO MENSAJES PARA SINCRONIZAR \
-PROCESOS)",1.5);
-#ifdef NUEVO
- NACT("REPORTES DE LAS PRACTICAS 3, 4, 5, 6 y 7",0.5);
-#endif // NUEVO
- //NACT("U.T. II PROGRAMACION CONCURRENTE",0.0);
- //NACT("U.T. II PROGRAMACION CONCURRENTE",24.0);
+ NACT("U.T. II VARIABLES ALEATORIAS",0.5);
+ NACT("II.A Variables Aleatorias Discretas",1.5);
+ NACT("II.B Variables Aleatorias Continuas",2.0);
+ NACT("II.C Valor Esperado de una Variable Aleatoria",2.0);
+ NACT("II.D Problemas. Valor Esperado de una Variable Aleatoria Continua",2.0);
+ NACT("II.E Varianza de una Variable Aleatoria Discreta",1.0);
+ NACT("II.F Problemas. Varianza de la Variable Aleatoria Continua",3.0);
+ NACT("PRIMERA EVALUACION PARCIAL",2.0);
+ NACT("REVISION DE LA PRIMERA EVALUACION PARCIAL",0.5);
 
- NACT("U.T. III LAS TAREAS, INTERRUPCIONES Y EL RELOJ \
-EN TIEMPO REAL",0.25);
- NACT("3.1 Tareas en tiempo real (AD P8 MANEJO DE \
-INTERRUCIONES)",0.25);
- NACT("3.1 Tareas en tiempo real (AA P8 MANEJO DE \
-INTERRUCIONES)",1.0);
-#ifdef NUEVO
- NACT("TRABAJO DE INVESTIGACION SOBRE LOS PROCESOS/TAREAS DE LOS \
-SISTEMAS OPERATIVOS",0.5);
-#endif // NUEVO
- NACT("3.2 Interrupciones (AD P8 MANEJO DE INTERRUCIONES)",2.0);
- NACT("3.2 Interrupciones (AA P8 MANEJO DE INTERRUCIONES)",1.5);
-#ifdef NUEVO
- NACT("CUADRO/TABLA COMPARATIVA DE INTERRUPCIONES ENMASCARABLES \
-Y NO ENMASCARABLES DE LOS MICROPROCESADORES INTEL",0.5);
-#endif // NUEVO
- NACT("3.3 Reloj del sistema (AD P9 MEDICION DEL TIEMPO \
-EN UNA TAREA DEL SISTEMA)",1.0);
-#ifdef NUEVO
- NACT("ALBUM DE ARCHIVOS DE CODIGO FUENTE EN LENGUAJE ENSAMBLADOR \
-Y ANSI C",0.5);
-#endif // NUEVO
- NACT("3.3 Reloj del sistema (AA P9 MEDICION DEL TIEMPO \
-EN UNA TAREA DEL SISTEMA)",1.5);
-#ifdef NUEVO
- NACT("REPORTES DE LAS PRACTICAS 8 y 9",0.5);
-#endif // NUEVO
- //NACT("U.T. III LAS TAREAS, INTERRUPCIONES Y EL RELOJ
-//EN TIEMPO REAL",0.0);
- //NACT("U.T. III LAS TAREAS, INTERRUPCIONES Y EL RELOJ
-//EN TIEMPO REAL",14.0);
+ NACT("U.T. III DISTRIBUCIONES DISCRETAS",0.5);
+ NACT("III.A Distribuci\\'on de Probabilidad de Bernoulli",1.0);
+ NACT("III.B Distribuci\\'on de Probabilidad Binomial",1.0);
+ NACT("III.C Distribuci\\'on de Probabilidad Geom\\'etrica",1.0);
+ NACT("III.D Distribuci\\'on de Probabilidad Binomial Negativa",1.0);
+ NACT("III.E Distribuci\\'on Hipergeom\\'etrica",1.0);
+ NACT("III.F Distribuci\\'on Poisson",1.0);
 
- NACT("U.T. IV PLANIFICACION DE PROCESOS",0.25);
- NACT("4.1 Planificador del sistema en tiempo real \
-(AD P10 PLANIFICANDO PROCESOS)",1.75);
- NACT("4.1 Planificador del sistema en tiempo real \
-(AA P10 PLANIFICANDO PROCESOS)",5.0);
- NACT("4.2 Enfoque c\\'iclico (AD P10 PLANIFICANDO \
-PROCESOS)",0.5);
- NACT("4.2 Enfoque c\\'iclico (AA P10 PLANIFICANDO \
-PROCESOS)",1.0);
-#ifdef NUEVO
- NACT("TRABAJO DE INVESTIGACION SOBRE PLANIFICACION DE PROCESOS/TAREAS"
-,0.5);
-#endif // NUEVO
- NACT("4.3 Algoritmos de planificaci\\'on (AD P11 ALGORITMOS \
-DE PLANIFICACION)",2.0);
- NACT("4.3 Algoritmos de planificaci\\'on (AA P11 ALGORITMOS \
-DE PLANIFICACION)",3.5);
- NACT("4.4 Procesos espor\\'adicos y aperi\\'odicos (AD P11 \
-ALGORITMOS DE PLANIFICACION)",1.0);
- NACT("4.4 Procesos espor\\'adicos y aperi\\'odicos (AA P11 \
-ALGORITMOS DE PLANIFICACION)",1.5);
-#ifdef NUEVO
- NACT("CUADRO/TABLA COMPARATIVA DE ALGORITMOS DE PLANIFICACION \
-DE TAREAS EN SISTEMAS OPERATIVOS DE TIEMPO REAL",0.5);
-#endif // NUEVO
- NACT("4.5 Interacci\\'on de procesos y bloqueo (AD P12 \
-PLANIFICACION POR PRIORIDAD",1.5);
-#ifdef NUEVO
- NACT("ALBUM DE ARCHIVOS DE CODIGO FUENTE EN LENGUAJE ENSAMBLADOR \
-Y ANSI C",0.5);
-#endif // NUEVO
- NACT("4.5 Interacci\\'on de procesos y bloqueo (AA P12 \
-PLANIFICACION POR PRIORIDAD)",1.5);
-#ifdef NUEVO
- NACT("REPORTES DE LAS PRACTICAS 10, 11 y 12",0.5);
-#endif // NUEVO
- //NACT("U.T. III LAS TAREAS, INTERRUPCIONES Y EL RELOJ
-//EN TIEMPO REAL",0.0);
- //NACT("U.T. III LAS TAREAS, INTERRUPCIONES Y EL RELOJ
-//EN TIEMPO REAL",25.0);
+ NACT("U.T. IV DISTRIBUCIONES CONTINUAS",0.5);
+ NACT("IV.A Distribuci\\'on Uniforme",1.5);
+ NACT("IV.B Distribuci\\'on Exponencial",2.0);
+
+ NACT("U.T. V LA DISTRIBUCION NORMAL",0.5);
+ NACT("V.A Uso de la distribuci\\'on normal en el c\\'alculo de probabilidad",3.5);
+ NACT("V.B Distribuciones relacionadas con la distribuci\\'on normal",1.0);
+ NACT("SEGUNDA EVALUACION PARCIAL",2.0);
+ NACT("REVISION DE LA SEGUNDA EVALUACION PARCIAL",0.5);
+
+ NACT("U.T. VI ESTADISTICA DESCRIPTIVA",0.5);
+ NACT("VI.A Poblaci\\'on, muestra y muestra aleatoria",2.0);
+ NACT("VI.B Presentaci\\'on de datos",2.0);
+ NACT("VI.C Estad\\'isticos muestrales",3.0);
+ NACT("U.T. VII ESTIMACION ESTADISTICA Y DISTRIBUCIONES DE MUESTREO",0.5);
+ NACT("VII.A Estimadores puntuales",1.5);
+ NACT("VII.B Propiedades de los estimadores puntuales",1.0);
+ NACT("VII.C Distribuciones de muestreo",1.0);
+
+ NACT("U.T. VIII INFERENCIAS EN UNA POBLACION",0.5);
+ NACT("VIII.A Intervalos de confianza",1.5);
+ NACT("VIII.B Pruebas de hip\\'otesis",2.0);
+
+ NACT("U.T. IX  INFERENCIAS DE DOS POBLACIONES",0.5);
+ NACT("IX.A Introducci\\'on",1.5);
+ NACT("IX.B An\\'alisis de muestras independientes",2.0);
+
+ NACT("TERCERA EVALUACION PARCIAL",2.0);
+ NACT("REVISION DE LA TERCERA EVALUACION PARCIAL",2.0);
+
+ NACT("EVALUACION FINAL",2.0);
+ NACT("REVISION DE LA EVALUACION FINAL",0.5);
 }

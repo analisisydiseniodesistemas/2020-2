@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="ProbYEst_2022_2_ICI" />
+		<Option title="ProbyEst_2022_2_ICE" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/ProbYEst_2022_2_ICI" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/PLANNING_PyE_MJ_2021" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,8 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/ProbYEst_2022_2_ICI" prefix_auto="1" extension_auto="1" />
+				<!-- <Option output="bin/Release/PLANNING_PyE_MJ_2021" prefix_auto="1" extension_auto="1" /> -->
+				<Option output="bin/Release/ProbyEst_2022_2_ICE" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -34,18 +35,26 @@
 			<Add directory="../CommonFiles" />
 		</Compiler>
 		<Unit filename="../CommonFiles/Actividad.cpp" />
+		<Unit filename="../CommonFiles/Actividad.h" />
+		<Unit filename="../CommonFiles/AdA.h" />
+		<Unit filename="../CommonFiles/Alumno.h" />
 		<Unit filename="../CommonFiles/Asignacion.cpp" />
+		<Unit filename="../CommonFiles/Asignacion.h" />
 		<Unit filename="../CommonFiles/Calendario.cpp" />
 		<Unit filename="../CommonFiles/Calendario.h" />
 		<Unit filename="../CommonFiles/Dia.cpp" />
 		<Unit filename="../CommonFiles/Dia.h" />
+		<Unit filename="../CommonFiles/DiaTiempo.h" />
+		<Unit filename="../CommonFiles/Fecha.h" />
+		<Unit filename="../CommonFiles/bubbles.cpp" />
+		<Unit filename="../CommonFiles/gettingdate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../CommonFiles/gettingdate.h" />
 		<Unit filename="../CommonFiles/util.cpp" />
-		<Unit filename="PLANNING_ProbYEst_2022_2/ProbYEst_2022_2_ICI.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="PLANNING_ProbYEst_2022_2/ProbYEst_2022_2_ICI_data.cpp">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="../CommonFiles/util.h" />
+		<Unit filename="PyE_data.cpp" />
+		<Unit filename="mainPLANNING_PyE.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
